@@ -1,11 +1,12 @@
-//import * as React from "react";
+import React, { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { useFonts } from "expo-font";
-import {useState} from "react";
-import MainPage from "./screens/MainPage";
-
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { View, Text, Pressable, TouchableOpacity } from "react-native";
+
+import MainPage from "./screens/MainPage";
+import IntroScreen from "./screens/IntroScreen";
+import SignUpScreen from "./screens/SignUpScreen";
+import SignInScreen from "./screens/SignInScreen";
 
 const App = () => {
   const [hideSplashScreen, setHideSplashScreen] = useState(true);
@@ -21,21 +22,34 @@ const App = () => {
 
   const Stack = createNativeStackNavigator();
 
-
   return (
-    <>
-      <NavigationContainer>
-        {hideSplashScreen ? (
-          <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen
-              name="MainPage"
-              component={MainPage}
-              options={{ headerShown: false }}
-            />
-          </Stack.Navigator>
-        ) : null}
-      </NavigationContainer>
-    </>
+    <NavigationContainer>
+      {hideSplashScreen ? (
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen
+            name="Intro"
+            component={IntroScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="SignUp"
+            component={SignUpScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="SignIn"
+            component={SignInScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="MainPage"
+            component={MainPage}
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+      ) : null}
+    </NavigationContainer>
   );
 };
+
 export default App;
