@@ -16,7 +16,8 @@ export default SignInScreen = () => {
                 <View style={{top:50}}>
                     <Text style={[styles.text, {bottom:10}]}>Password</Text>
                     <TextInput
-                        style={[styles.input]} 
+                        style={[styles.input]}
+                        secureTextEntry={true} 
                     />
                 </View>
 

@@ -2,6 +2,9 @@ import { View, Text, SafeAreaView, StyleSheet, Platform, StatusBar, TextInput, P
 import { AntDesign, FontAwesome } from '@expo/vector-icons';
 
 export default SignUpScreen = ({navigation}) => {
+
+  
+
   return (
     <SafeAreaView style={[styles.container]}>
       <View style={{flexDirection:'column', justifyContent:'center', paddingTop:30}}>
@@ -25,7 +28,8 @@ export default SignUpScreen = ({navigation}) => {
         <View style={{top:80}}>
           <Text style={[styles.text, {bottom:10}]}>Password</Text>
           <TextInput
-            style={[styles.input]} 
+            style={[styles.input]}
+            secureTextEntry={false}
           />
         </View>
 
