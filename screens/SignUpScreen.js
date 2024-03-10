@@ -29,7 +29,7 @@ export default SignUpScreen = ({navigation}) => {
           <Text style={[styles.text, {bottom:10}]}>Password</Text>
           <TextInput
             style={[styles.input]}
-            secureTextEntry={false}
+            secureTextEntry={true}
           />
         </View>
 
