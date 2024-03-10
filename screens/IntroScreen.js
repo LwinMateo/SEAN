@@ -1,7 +1,8 @@
 // IntroScreen.js
 import { useEffect } from 'react';
 import { View, Text, Image, SafeAreaView, StyleSheet } from 'react-native';
-
+// import video
+import { Video } from 'expo-av';
 
 export default IntroScreen = ({ navigation }) => {
   useEffect(() => {
@@ -15,11 +16,21 @@ export default IntroScreen = ({ navigation }) => {
   return (
     <SafeAreaView styles={[styles.container]}>
         <View style={{top: 155}}>
-            <Image
+            {/* <Image
                 source={require('../assets/6.png')}
                 style={{ width: 300, height: 300, alignSelf: "center", borderRadius: 150}}
+            /> */}
+            <Video
+                source={require('../assets/app_logo.mp4')}
+                rate={1.0}
+                volume={1.0}
+                isMuted={true}
+                resizeMode="cover"
+                shouldPlay={true}
+                isLooping={true}
+                style={{ width: 300, height: 300, alignSelf: "center", borderRadius: 150}}
             />
-            <Text style={[styles.text]}>Keeping our loved ones safe</Text>
+           
 
         </View>
        

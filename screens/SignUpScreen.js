@@ -1,9 +1,19 @@
 import { View, Text, SafeAreaView, StyleSheet, Platform, StatusBar, TextInput, Pressable} from 'react-native';
 import { AntDesign, FontAwesome } from '@expo/vector-icons';
+import {useState} from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default SignUpScreen = ({navigation}) => {
 
-  
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [fullName, setFullName] = useState('');
+
+  const handleSignUp = async () => {
+    const existingUsers = JSON.parse(await AsyncStorage.getItem('newUsers')) || [];
+    existingUsers.push({ fullName, email, password });
+    await AsyncStorage.setItem('newUsers', JSON.stringify(existingUsers));
+  }
 
   return (
     <SafeAreaView style={[styles.container]}>
@@ -21,6 +31,7 @@ export default SignUpScreen = ({navigation}) => {
           <Text style={[styles.text, {bottom:10}]}>Email</Text>
           <TextInput
             style={[styles.input]} 
+            keyboardType='email-address'
           />
         </View>
 
