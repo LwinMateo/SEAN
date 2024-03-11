@@ -15,7 +15,7 @@ export default UserOption = ({navigation}) => {
                     <MaterialCommunityIcons name="human-greeting-variant" size={50} color="black" style={{top:13, left: 7}}/>
                 </View>
                 <View style={{top:130, left: 65, flexDirection:'row'}}>
-                    <Text style={{color:'#747d8c'}}>Creating a safer neighbourhood for All</Text>
+                    <Text style={{color:'#747d8c'}}>Creating a safer neighbourhood for</Text>
                     
                 </View>
                 <View style={{flexDirection:'row'}}>

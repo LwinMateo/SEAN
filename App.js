@@ -9,6 +9,9 @@ import SignUpScreen from "./screens/SignUpScreen";
 import SignInScreen from "./screens/SignInScreen";
 import userOption from "./screens/userOption";
 
+// import the sidebars1.js file
+import sidebars1 from "./screens/sidebars1";
+
 const App = () => {
   const [hideSplashScreen, setHideSplashScreen] = useState(true);
 
@@ -50,6 +53,11 @@ const App = () => {
           <Stack.Screen
             name="MainPage"
             component={MainPage}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="sidebars1"
+            component={sidebars1}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

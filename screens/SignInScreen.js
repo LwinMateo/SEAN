@@ -1,7 +1,7 @@
 import {View, Text, Image, SafeAreaView, StyleSheet, TextInput, TouchableOpacity, StatusBar, Platform, Pressable, ScrollView} from 'react-native';
 import { Entypo, AntDesign } from '@expo/vector-icons';
 
-export default SignInScreen = () => {
+export default SignInScreen = ({navigation}) => {
     return (
         <ScrollView style={[styles.container]}>
            
