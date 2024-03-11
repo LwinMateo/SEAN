@@ -2,22 +2,17 @@ import * as React from "react";
 import { Image } from "expo-image";
 import { StyleSheet, Text, Pressable, View, ScrollView, Platform, StatusBar, TextInput, SafeAreaView} from "react-native";
 import { FontSize, Color, FontFamily, Border } from "../GlobalStyles";
-import { Entypo, AntDesign, FontAwesome6, Feather } from "@expo/vector-icons";
+import { Entypo, AntDesign, FontAwesome6, FontAwesome5, Feather, FontAwesome } from "@expo/vector-icons";
 // import from expo-font
 
 const MainPage = () => {
   return (
     <ScrollView>
       <View style={styles.mainPage}>
-      {/* <Image
-        style={styles.mainPageChild}
-        contentFit="cover"
-        source={require("../assets/rectangle-8.png")}
-      /> */}
+      
+      
 
-      <TextInput style={[styles.mainPageChild, {width: "90%"}, {backgroundColor: '#ecf0f1'}, {height: "3%"}, {borderRadius: 10}, {padding:10}]} placeholder="Location"/>
-      <Text style={styles.yourCurrentLocation}>{`Your Current Location `}</Text>
-
+      
       <Text style={[styles.williamsBrown, styles.hudaZakyTypo]}>
         Williams Brown
       </Text>
@@ -69,11 +64,37 @@ const MainPage = () => {
         contentFit="cover"
         source={require("../assets/rectangle-33.png")}
       /> */}
-      <TextInput style={[styles.rectangleIcon, styles.rectangleIconLayout, {width: "90%"}, {backgroundColor: '#ecf0f1'}, {height: "15%"}, {borderRadius: 10}, {padding:10}]}/>
+      {/* <TextInput style={[styles.rectangleIcon, styles.rectangleIconLayout, {width: "90%"}, {backgroundColor: '#ecf0f1'}, {height: "15%"}, {borderRadius: 10}, {padding:10}]}/> */}
+      <Image
+        style={{top:250, left: 10, width: 370, height: 160}}
+        contentFit="cover"
+        source={require("../assets/img-3063.png")}
+      />
 
 
-      <TextInput style={[styles.mainPageChild2, styles.rectangleIconLayout, {width: "90%"}, {backgroundColor: '#ecf0f1'}, {height: "15%"}, {borderRadius: 10}, {padding:10}]} />
-      <Text
+        
+      <Image
+        style={{top:380, left: 10, width: 370, height: 170}}
+        contentFit="cover"
+        source={require("../assets/img-3065.png")}/>
+
+
+
+        <View style={{flexDirection:'row'}}>
+          <Image
+            style={{top:500, left: 20, width: 180, height: 170}}
+            contentFit="cover"
+            source={require("../assets/img-3067.png")}
+          />
+          <Image
+            style={{top:500, left: 20, width: 180, height: 170}}
+            contentFit="cover"
+            source={require("../assets/img-3068.png")}
+          />
+        </View>      
+
+
+        <Text
         style={[styles.torontoOntario, styles.ontarioTypo]}
       >{`Toronto, Ontario `}</Text>
       <Text
@@ -96,10 +117,40 @@ const MainPage = () => {
       
 
 
-      <Text style={styles.near}>
-        <Text style={styles.near1}>NEAR</Text>
-        <Text style={styles.text}>{`  `}</Text>
-      </Text>
+      <View style={[styles.near, {flexDirection: 'row'}]}>
+        <Text style={[styles.near1, {fontSize: 22}]}>NEAR</Text>
+        {/* <Text style={styles.text}>{`  `}</Text> */}
+        <View style={{width: 35, height:35, backgroundColor: 'white', left:70, borderRadius: 22, top: 5}}>
+          <Entypo name="home" size={24} color="#273c75" style={{top:4, left:5}} />
+        </View>
+
+        <View style={{width: 35, height:35, backgroundColor: 'white', left:100, borderRadius: 22, top: 5}}>
+          <FontAwesome name="plus" size={24} color="#273c75" style={{top:6, left:8}}/>
+        </View>
+
+        <View style={{width: 35, height:35, backgroundColor: 'white', left:130, borderRadius: 22, top: 5}}>
+          {/* <Entypo name="home" size={24} color="#273c75" style={{top:4, left:5}} /> */}
+          <AntDesign name="message1" size={24} color="#273c75" style={{top:6, left:6}} />
+        </View>
+
+        <View style={{width: 35, height:35, backgroundColor: 'white', left:160, borderRadius: 22, top: 5}}>
+          <FontAwesome5 name="user-alt" size={24} color="#273c75" style={{top:4, left:5}} />        
+
+        </View>
+
+        <View style={{right:195, flexDirection:'row'}}>
+          <TextInput style={{width: 320, height:35, top:50, paddingLeft:10, backgroundColor:'white', borderRadius:15}} placeholder="Your Current Location"/>
+          <View style={{width: 35, height:35, backgroundColor: 'white', left:5, borderRadius: 22, top: 50}}>
+          <FontAwesome5 name="search" size={24} color="#273c75" style={{top:4, left:5}} />        
+        </View>
+        </View>
+
+
+
+        {/* <Text style={styles.yourCurrentLocation}>{`Your Current Location `}</Text> */}
+
+
+      </View>
       <Image
         style={[styles.img3061Icon, styles.iconLayout]}
         contentFit="cover"
@@ -412,6 +463,8 @@ const styles = StyleSheet.create({
   near1: {
     fontWeight: 'bold',
     //fontWeight: "700",
+    paddingLeft: 10,
+    top: 6
   },
   text: {
     // fontFamily: 'regular',
@@ -420,13 +473,14 @@ const styles = StyleSheet.create({
     marginTop: -540,
     marginLeft: -45,
     fontSize: 35,
-    width: 197,
-    height: 121,
+    width: 500,
+    height: 100,
     textAlign: "left",
     color: "#000",
-    left: "50%",
+    left: 45,
     top: "50%",
-    position: "absolute",
+    position: "absolute", 
+    backgroundColor: "#74b9ff",
   },
   img3061Icon: {
     left: 20,

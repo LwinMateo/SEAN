@@ -30,7 +30,7 @@ export default SignUpScreen = ({navigation}) => {
                 </View>
 
                 <View style={{top:140}}>
-                    <Pressable style={[styles.press]}>
+                    <Pressable style={[styles.press]} onPress={()=>{navigation.navigate("MainPage")}}>
                         <Text style={{fontSize: 18, color:'#ffff'}}>Sign Up</Text>
                     </Pressable>
                     <Text style={{top: 60, left: 140}}>Forgot Password?</Text>
