@@ -7,6 +7,7 @@ import MainPage from "./screens/MainPage";
 import IntroScreen from "./screens/IntroScreen";
 import SignUpScreen from "./screens/SignUpScreen";
 import SignInScreen from "./screens/SignInScreen";
+import userOption from "./screens/userOption";
 
 const App = () => {
   const [hideSplashScreen, setHideSplashScreen] = useState(true);
@@ -32,14 +33,19 @@ const App = () => {
             options={{ headerShown: false }}
           />
           <Stack.Screen
-            name="SignUp"
-            component={SignUpScreen}
+            name="userOption"
+            component={userOption}
             options={{ headerShown: false }}
           />
           <Stack.Screen
-            name="SignIn"
+            name="SignUp"
+            component={SignUpScreen}
+            options={{ headerShown: true, headerTitle: ""}}
+          />
+          <Stack.Screen
+            name="Login"
             component={SignInScreen}
-            options={{ headerShown: false }}
+            options={{ headerShown: true , headerTitle: ""}}
           />
           <Stack.Screen
             name="MainPage"
@@ -48,6 +54,7 @@ const App = () => {
           />
         </Stack.Navigator>
       ) : null}
+
     </NavigationContainer>
   );
 };

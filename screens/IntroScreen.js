@@ -7,7 +7,7 @@ import { Video } from 'expo-av';
 export default IntroScreen = ({ navigation }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigation.navigate('SignUp');
+      navigation.navigate('userOption');
     }, 3000); // 3 seconds
 
     return () => clearTimeout(timer); // cleanup function

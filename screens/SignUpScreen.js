@@ -1,76 +1,69 @@
-import { View, Text, SafeAreaView, StyleSheet, Platform, StatusBar, TextInput, Pressable} from 'react-native';
-import { AntDesign, FontAwesome } from '@expo/vector-icons';
-import {useState} from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import {View, Text, Image, SafeAreaView, StyleSheet, TextInput, TouchableOpacity, StatusBar, Platform, Pressable, ScrollView} from 'react-native';
+import { Entypo, AntDesign } from '@expo/vector-icons';
+
 
 export default SignUpScreen = ({navigation}) => {
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [fullName, setFullName] = useState('');
-
-  const handleSignUp = async () => {
-    const existingUsers = JSON.parse(await AsyncStorage.getItem('newUsers')) || [];
-    existingUsers.push({ fullName, email, password });
-    await AsyncStorage.setItem('newUsers', JSON.stringify(existingUsers));
-  }
-
   return (
-    <SafeAreaView style={[styles.container]}>
-      <View style={{flexDirection:'column', justifyContent:'center', paddingTop:30}}>
-        <Text style={[styles.headingText]}>NEAR</Text>
+        <ScrollView style={[styles.container]}>
+          
+            <SafeAreaView style={{flexDirection:'column', justifyContent:'center', paddingTop:30, paddingBottom:350}}>
+                <View style={{right:110, top:-25, flexDirection:'column'}}>
+                    <Text style={[styles.headingText, {right:12}]}>Sign Up</Text>
+                    <Text style={[styles.text, {left:130, color:'#747d8c'}]}>Create a new account</Text>
+                </View>
+                
 
-        <View style={{top:20}}>
-          <Text style={[styles.text, {bottom:10}]}>Full Name</Text>
-          <TextInput
-            style={[styles.input]} 
-          />
-        </View>
+                <View style={{top:40}}>
+                    <Text style={[styles.text, {bottom:10}]}>Email</Text>
+                    <TextInput
+                        style={[styles.input]} 
+                    />
+                </View>
 
-        <View style={{top:50}}>
-          <Text style={[styles.text, {bottom:10}]}>Email</Text>
-          <TextInput
-            style={[styles.input]} 
-            keyboardType='email-address'
-          />
-        </View>
+                <View style={{top:60}}>
+                    <Text style={[styles.text, {bottom:10}]}>Password</Text>
+                    <TextInput
+                        style={[styles.input]}
+                        secureTextEntry={true} 
+                    />
+                </View>
+
+                <View style={{top:140}}>
+                    <Pressable style={[styles.press]}>
+                        <Text style={{fontSize: 18, color:'#ffff'}}>Sign Up</Text>
+                    </Pressable>
+                    <Text style={{top: 60, left: 140}}>Forgot Password?</Text>
+                </View>
 
 
-        <View style={{top:80}}>
-          <Text style={[styles.text, {bottom:10}]}>Password</Text>
-          <TextInput
-            style={[styles.input]}
-            secureTextEntry={true}
-          />
-        </View>
+                <View style={{top:195, flexDirection:'row', justifyContent:'space-evenly'}}>
+                    <View style={{ borderBottomColor: 'black', borderBottomWidth: 1, marginTop: 70, marginBottom: 11, width: 150, right:-10}} />
+                    <Text style={{top: 60, right:0, fontWeight:'bold'}}>Or</Text>
+                    <View style={{ borderBottomColor: 'black', borderBottomWidth: 1, marginTop: 70, marginBottom: 11, width: 150, right:10}} />
 
-        <View style={{top:10}}>
-          <Pressable style={[styles.press]}>
-            <Text style={{fontSize: 18}}>Sign Up</Text>
-          </Pressable>
+                </View>
+                
+                <View style={{top: 230, flexDirection:'row', justifyContent:'space-evenly'}}>
+                    <AntDesign name="google" size={54} color="#ffa502" />
+                    <Entypo name="facebook" size={54} color="#3742fa" />
+                    <AntDesign name="apple1" size={54} color="#747d8c" />
+                </View>
 
-          <Pressable style={[styles.press1]}>
-            <Text style={{fontSize: 18, left:23}}>Sign up with Google</Text>
-            <AntDesign name="google" size={24} color="black" style={{right:25}}/>
-          </Pressable>
+                <View style={{top: 280, flexDirection:'row', justifyContent:'space-evenly'}}>
 
-          <Pressable style={[styles.press2]}>
-            <Text style={{fontSize: 18, left:23}}>Sign up with Facebook</Text>
-            <FontAwesome name="facebook-f" size={24} color="black" style={{right: 29}}/>
-          </Pressable>
+                    <Text style={{fontSize:20, left: 5}}>Already have an account?</Text>
+                    <Text style={{fontSize:20, color:"blue", right:23}}>Login</Text>
+                    
+                </View>
+                
 
-        </View>
-       
 
-        <View style={{flexDirection:'row', bottom:-206, left:30}}>
-            <Text>Already have an account?</Text>
-            <Text style={{left: 10, color:"blue"}} onPress={() => {navigation.navigate('SignIn')}}>Sign in</Text>
-        </View>
-
-       
-      </View>
-    </SafeAreaView>
-  );
+            </SafeAreaView>
+      
+            
+        </ScrollView>
+    );
 };
 
 const styles = StyleSheet.create({
@@ -91,48 +84,24 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: "left",
     left: 25
-  },    
-  input:{
-    height: 45,
-    backgroundColor: '#f1f2f6',
-    borderWidth: 1,
-    left:25,
-    width: 340,
-    borderRadius: 15,
-    paddingLeft: 15,
   },
-  press:{
-    backgroundColor: '#45aaf2',
-    height: 45,
-    width: 340,
-    borderRadius: 15,
-    top: 100,
-    left: 25,
-    justifyContent: 'center',
-    alignItems: 'center',
+  input: {
+      height: 45,
+      backgroundColor: '#f1f2f6',
+      borderBottomWidth: 2,
+      left:25,
+      width: 340,
+      borderRadius: 5,
+      paddingLeft: 15,
   },
-  press1:{
-    backgroundColor: '#a5b1c2',
-    height: 45,
-    width: 340,
-    borderRadius: 15,
-    top: 140,
-    left: 25,
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    flexDirection: 'row'
+  press: {
+      backgroundColor: '#273c75',
+      height: 45,
+      width: 250,
+      borderRadius: 25,
+      top: 50,
+      left: 70,
+      justifyContent: 'center',
+      alignItems: 'center',
   },
-  press2:{
-    backgroundColor: '#a5b1c2',
-    height: 45,
-    width: 340,
-    borderRadius: 15,
-    top: 160,
-    left: 25,
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    flexDirection: 'row'
-  }
-
-
 });
