@@ -124,23 +124,27 @@ const MainPage = ({navigation}) => {
           <Entypo name="home" size={24} color="#273c75" style={{top:4, left:5}} />
         </View>
 
-        <View style={{width: 35, height:35, backgroundColor: 'white', left:100, borderRadius: 22, top: 5}}>
           <Pressable onPress={()=>{navigation.navigate('Post')}}>
-          <FontAwesome name="plus" size={24} color="#273c75" style={{top:6, left:8}}/>          
+          <View style={{width: 35, height:35, backgroundColor: 'white', left:100, borderRadius: 22, top: 5}}>
+
+          <FontAwesome name="plus" size={24} color="#273c75" style={{top:6, left:8}}/>   
+          </View>       
           </Pressable>
           
-        </View>
+        
 
         <View style={{width: 35, height:35, backgroundColor: 'white', left:130, borderRadius: 22, top: 5}}>
           {/* <Entypo name="home" size={24} color="#273c75" style={{top:4, left:5}} /> */}
           <AntDesign name="message1" size={24} color="#273c75" style={{top:6, left:6}} />
         </View>
 
-        <View style={{width: 35, height:35, backgroundColor: 'white', left:160, borderRadius: 22, top: 5 }} >
+        
           <Pressable onPress={() => {navigation.navigate('sidebars1')}}>
-            <FontAwesome5 name="user-alt" size={24} color="#273c75" style={{top:4, left:5}}  />       
+            <View style={{width: 35, height:35, backgroundColor: 'white', left:160, borderRadius: 22, top: 5 }} >
+            <FontAwesome5 name="user-alt" size={24} color="#273c75" style={{top:4, left:5}}  /> 
+            </View>      
           </Pressable>
-        </View>
+        
 
         <View style={{right:195, flexDirection:'row'}}>
           <TextInput style={{width: 320, height:35, top:50, paddingLeft:10, backgroundColor:'white', borderRadius:15}} placeholder="Your Current Location"/>
