@@ -1,9 +1,9 @@
 //import * as React from "react";
-import { Text, StyleSheet, View, SafeAreaView, Platform, StatusBar, ScrollView } from "react-native";
+import { Text, StyleSheet, View, SafeAreaView, Platform, StatusBar, ScrollView, Pressable } from "react-native";
 import { Image } from "expo-image";
 import { AntDesign, FontAwesome5, SimpleLineIcons, Feather } from "@expo/vector-icons";
 
-const SideBars1 = () => {
+const SideBars1 = ({navigation}) => {
   return (
     <ScrollView style={[styles.container]}>
         <SafeAreaView style={{flexDirection:'column', justifyContent:'center', paddingTop:30, paddingBottom:350}}>
@@ -30,9 +30,19 @@ const SideBars1 = () => {
             </View>
 
 
+            <View style={{flexDirection: "row", left: 115, top:50, width:160, backgroundColor: "#74b9ff", justifyContent:'center', borderRadius:50}}>
+                <Pressable onPress={()=>{navigation.navigate('ContactsOptions')}}>
+
+                    <Text style={{fontSize:15, marginTop:10, marginBottom:10, paddingLeft:5, paddingRight:5, color:'white'}}>Contacts and Groups</Text>
+
+                </Pressable>
+            </View>
+
+
             <View style={{flexDirection: "row", left: 30, top:100, borderBottomWidth:1, width: 100, borderBottomColor:"#95a5a6"}}>
                 
             </View>
+
 
             
         
@@ -47,8 +57,10 @@ const SideBars1 = () => {
             </View>
 
             <View style={{flexDirection: "row", left: 30, top:190}}>
-                <AntDesign name="logout" size={24} color="#95a5a6" />                
-                <Text style={[styles.text, {left: 20,  color:"#95a5a6"}]}>Help Center</Text>
+                <Pressable onPress={()=>{navigation.navigate('userOption')}}>
+                    <AntDesign name="logout" size={24} color="#95a5a6" />                
+                    <Text style={[styles.text, {left: 50,  color:"#95a5a6", top: -25}]}>Logout</Text>
+                </Pressable>
             </View>
 
 

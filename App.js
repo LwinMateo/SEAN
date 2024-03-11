@@ -12,6 +12,9 @@ import userOption from "./screens/userOption";
 // import the sidebars1.js file
 import sidebars1 from "./screens/sidebars1";
 
+import ContactsOptions from "./screens/ContactsOptions";
+import GroupsOptions from "./screens/GroupsOptions";
+
 const App = () => {
   const [hideSplashScreen, setHideSplashScreen] = useState(true);
 
@@ -59,6 +62,17 @@ const App = () => {
             name="sidebars1"
             component={sidebars1}
             options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ContactsOptions"
+            component={ContactsOptions}
+            options={{ headerShown: true, headerTitle: "Contacts", headerStyle: { backgroundColor: "#74b9ff"}}}
+            
+          />
+          <Stack.Screen
+            name="GroupsOptions"
+            component={GroupsOptions}
+            options={{ headerShown: true, headerStyle: { backgroundColor: "#74b9ff"}}}
           />
         </Stack.Navigator>
       ) : null}

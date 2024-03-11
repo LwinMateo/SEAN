@@ -5,7 +5,7 @@ import { FontSize, Color, FontFamily, Border } from "../GlobalStyles";
 import { Entypo, AntDesign, FontAwesome6, FontAwesome5, Feather, FontAwesome } from "@expo/vector-icons";
 // import from expo-font
 
-const MainPage = () => {
+const MainPage = ({navigation}) => {
   return (
     <ScrollView>
       <View style={styles.mainPage}>
@@ -133,9 +133,10 @@ const MainPage = () => {
           <AntDesign name="message1" size={24} color="#273c75" style={{top:6, left:6}} />
         </View>
 
-        <View style={{width: 35, height:35, backgroundColor: 'white', left:160, borderRadius: 22, top: 5}}>
-          <FontAwesome5 name="user-alt" size={24} color="#273c75" style={{top:4, left:5}} />        
-
+        <View style={{width: 35, height:35, backgroundColor: 'white', left:160, borderRadius: 22, top: 5 }} >
+          <Pressable onPress={() => {navigation.navigate('sidebars1')}}>
+            <FontAwesome5 name="user-alt" size={24} color="#273c75" style={{top:4, left:5}}  />       
+          </Pressable>
         </View>
 
         <View style={{right:195, flexDirection:'row'}}>
