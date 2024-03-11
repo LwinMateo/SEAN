@@ -15,6 +15,10 @@ import sidebars1 from "./screens/sidebars1";
 import ContactsOptions from "./screens/ContactsOptions";
 import GroupsOptions from "./screens/GroupsOptions";
 
+import StudentSupport from "./screens/StudentSupport";  
+
+import Post from "./screens/Post";
+
 const App = () => {
   const [hideSplashScreen, setHideSplashScreen] = useState(true);
 
@@ -74,6 +78,19 @@ const App = () => {
             component={GroupsOptions}
             options={{ headerShown: true, headerStyle: { backgroundColor: "#74b9ff"}}}
           />
+
+          <Stack.Screen
+            name="StudentSupport"
+            component={StudentSupport}
+            options={{ headerShown: true, headerTitle: "Student Support", headerStyle: { backgroundColor: "#74b9ff"}}}
+          />
+
+          <Stack.Screen
+            name="Post"
+            component={Post}
+            options={{ headerShown: true, headerTitle: "Post", headerStyle: { backgroundColor: "#74b9ff"}}}
+          />
+
         </Stack.Navigator>
       ) : null}
 

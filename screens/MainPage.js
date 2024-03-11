@@ -125,7 +125,10 @@ const MainPage = ({navigation}) => {
         </View>
 
         <View style={{width: 35, height:35, backgroundColor: 'white', left:100, borderRadius: 22, top: 5}}>
-          <FontAwesome name="plus" size={24} color="#273c75" style={{top:6, left:8}}/>
+          <Pressable onPress={()=>{navigation.navigate('Post')}}>
+          <FontAwesome name="plus" size={24} color="#273c75" style={{top:6, left:8}}/>          
+          </Pressable>
+          
         </View>
 
         <View style={{width: 35, height:35, backgroundColor: 'white', left:130, borderRadius: 22, top: 5}}>

@@ -44,7 +44,7 @@ export default GroupsOptions = ({navigation}) => {
                 <ScrollView>
                     <View style={{top:14, paddingBottom:300}}>
                         
-
+                        <Pressable onPress={()=>{navigation.navigate('StudentSupport')}}>
                         <View style={{top: 10, left:-5, width: 500, height: 125, backgroundColor:'white', flexDirection:'row'}}>
                             <Image source={require("../assets/pexels-photo-335393 2.png")} style={{top: 24, left:20}}/>
 
@@ -64,6 +64,7 @@ export default GroupsOptions = ({navigation}) => {
                             </View>
 
                         </View>
+                        </Pressable>
 
 
 
