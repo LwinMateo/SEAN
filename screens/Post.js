@@ -42,6 +42,10 @@ export default Post = ({navigation}) => {
                     <Image
                         source={require("../assets/Group 2.png")}
                     />
+                    <Image
+                        source={require("../assets/Group 3.png")}
+                        style={{top:-174, left:5}}
+                    />
                 </View>
 
 

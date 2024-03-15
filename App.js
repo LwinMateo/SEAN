@@ -19,6 +19,11 @@ import StudentSupport from "./screens/StudentSupport";
 
 import Post from "./screens/Post";
 
+
+import Post1 from './screens/post1'
+import Post2 from './screens/post2'
+import Post3 from './screens/post3'
+
 const App = () => {
   const [hideSplashScreen, setHideSplashScreen] = useState(true);
 
@@ -89,6 +94,25 @@ const App = () => {
             name="Post"
             component={Post}
             options={{ headerShown: true, headerTitle: "Post", headerStyle: { backgroundColor: "#74b9ff"}}}
+          />
+
+
+          <Stack.Screen
+            name="Post1"
+            component={Post1}
+            options={{ headerShown: false }}
+            />
+
+          <Stack.Screen
+            name="Post2"
+            component={Post2}
+            options={{ headerShown: false }}
+          />
+
+          <Stack.Screen
+            name="Post3"
+            component={Post3}
+            options={{ headerShown: false }}
           />
 
         </Stack.Navigator>

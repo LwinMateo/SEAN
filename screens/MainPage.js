@@ -1,219 +1,344 @@
 import * as React from "react";
 import { Image } from "expo-image";
 import { StyleSheet, Text, Pressable, View, ScrollView, Platform, StatusBar, TextInput, SafeAreaView} from "react-native";
-import { FontSize, Color, FontFamily, Border } from "../GlobalStyles";
-import { Entypo, AntDesign, FontAwesome6, FontAwesome5, Feather, FontAwesome } from "@expo/vector-icons";
-// import from expo-font
+import { Entypo, AntDesign, FontAwesome5, Feather, FontAwesome } from "@expo/vector-icons";
 
 const MainPage = ({navigation}) => {
   return (
-    <ScrollView>
-      <View style={styles.mainPage}>
-      
-      
+    <SafeAreaView style={[styles.container]}>
+      <View style={{flexDirection:'column', marginBottom:10, backgroundColor:"#74b9ff", width:905, height: 130, left: -23}}>
 
-      
-      <Text style={[styles.williamsBrown, styles.hudaZakyTypo]}>
-        Williams Brown
-      </Text>
-      <Text style={[styles.hudaZaky, styles.hudaZakyTypo]}>{`Huda Zaky`}</Text>
-      <Text
-        style={[styles.rachaelSmith, styles.hudaZakyTypo]}
-      >{`Rachael Smith `}</Text>
-      <Text style={styles.recentEvents}>{`RECENT EVENTS `}</Text>
-      {/* <Image
-        style={[styles.vectorIcon, styles.iconLayout1]}
-        contentFit="cover"
-        source={require("../assets/vector.png")}
-      /> */}
+        <View style={{flexDirection:'row', alignContent:'space-between'}}>
+          <Text style={{fontSize:24, fontWeight:'bold', right: -34, marginTop:7}}>NEAR</Text>
+          <View style={{flexDirection:'row', left:104, marginTop:7}}>
+            <View style={{flexDirection:'row', alignContent:'center', left:14, backgroundColor:'white', width:45, height:45, borderRadius:34}}>
+              <Entypo name="home" size={24} color="#273c75" style={{top:9, left:10}} />
+            </View>
 
-      <Entypo style={[styles.vectorIcon, styles.iconLayout1]} name="location-pin" size={24} color="black" />
-      
+            <Pressable onPress={()=>{navigation.navigate('Post')}}>
+            <View style={{flexDirection:'row', alignContent:'center', left:26, backgroundColor:'white', width:45, height:45, borderRadius:34}}>
+              
+                <FontAwesome name="plus" size={26} color="#273c75" style={{top:10, left:12}}/>
+                          
+            </View>
+            </Pressable>
 
-      {/* <Image
-        style={[styles.vectorIcon1, styles.vectorPosition]}
-        contentFit="cover"
-        source={require("../assets/vector1.png")}
-      /> */}
-      <Entypo style={[styles.vectorIcon1, styles.vectorPosition]} name="menu" size={24} color="black" />
+            <View style={{flexDirection:'row', alignContent:'center', left:38, backgroundColor:'white', width:45, height:45, borderRadius:34}}>
+              <AntDesign name="message1" size={24} color="#273c75" style={{top:10, left:11}} />
+            </View>
 
-      <Pressable
-        style={[styles.vector, styles.vectorPosition]}
-        onPress={() => {}}
-      >
-
-        {/* <Image
-          style={[styles.icon, styles.iconLayout1]}
-          contentFit="cover"
-          source={require("../assets/vector2.png")}
-        /> */}
-      <AntDesign style={[styles.icon, styles.iconLayout1]} name="message1" size={24} color="black" />
+            <Pressable onPress={()=>{navigation.navigate('sidebars1')}}>
+            <View style={{flexDirection:'row', alignContent:'center', left:50, backgroundColor:'white', width:45, height:45, borderRadius:34}}>
+              <FontAwesome5 name="user-alt" size={24} color="#273c75" style={{top:9, left:11}}  />
+            </View>
+            </Pressable>
 
 
-      </Pressable>
-      <View style={[styles.mainPageItem, styles.mainLayout]} />
-      <View style={[styles.mainPageInner, styles.mainLayout]} />
-      <View style={[styles.rectangleView, styles.mainLayout]} />
-      <Text style={styles.danger}>{`Danger `}</Text>
-      <Text style={[styles.warning, styles.noticeTypo]}>{`Warning `}</Text>
-      <Text style={[styles.caution, styles.noticeTypo]}>{`Caution   `}</Text>
-      <View style={styles.mainPageChild1} />
-      <Text style={[styles.notice, styles.noticeTypo]}>Notice</Text>
-      {/* <Image
-        style={[styles.rectangleIcon, styles.rectangleIconLayout]}
-        contentFit="cover"
-        source={require("../assets/rectangle-33.png")}
-      /> */}
-      {/* <TextInput style={[styles.rectangleIcon, styles.rectangleIconLayout, {width: "90%"}, {backgroundColor: '#ecf0f1'}, {height: "15%"}, {borderRadius: 10}, {padding:10}]}/> */}
-      <Image
-        style={{top:250, left: 10, width: 370, height: 160}}
-        contentFit="cover"
-        source={require("../assets/img-3063.png")}
-      />
-
-
-        
-      <Image
-        style={{top:380, left: 10, width: 370, height: 170}}
-        contentFit="cover"
-        source={require("../assets/img-3065.png")}/>
-
-
-
-        <View style={{flexDirection:'row'}}>
-          <Image
-            style={{top:500, left: 20, width: 180, height: 170}}
-            contentFit="cover"
-            source={require("../assets/img-3067.png")}
-          />
-          <Image
-            style={{top:500, left: 20, width: 180, height: 170}}
-            contentFit="cover"
-            source={require("../assets/img-3068.png")}
-          />
-        </View>      
-
-
-        <Text
-        style={[styles.torontoOntario, styles.ontarioTypo]}
-      >{`Toronto, Ontario `}</Text>
-      <Text
-        style={[styles.markhamOntario, styles.ontarioTypo]}
-      >{`Markham, Ontario `}</Text>
-      <Text
-        style={[styles.guelphOntario, styles.ontarioTypo]}
-      >{`Guelph, Ontario `}</Text>
-      <Image
-        style={[styles.img3057Icon, styles.iconLayout]}
-        contentFit="cover"
-        source={require("../assets/img-3057.png")}
-      />
-      <View style={styles.frameView} />
-      <Image
-        style={[styles.img3060Icon, styles.iconLayout]}
-        contentFit="cover"
-        source={require("../assets/img-3060.png")}
-      />
-      
-
-
-      <View style={[styles.near, {flexDirection: 'row'}]}>
-        <Text style={[styles.near1, {fontSize: 22}]}>NEAR</Text>
-        {/* <Text style={styles.text}>{`  `}</Text> */}
-        <View style={{width: 35, height:35, backgroundColor: 'white', left:70, borderRadius: 22, top: 5}}>
-          <Entypo name="home" size={24} color="#273c75" style={{top:4, left:5}} />
+          </View>
         </View>
 
-          <Pressable onPress={()=>{navigation.navigate('Post')}}>
-          <View style={{width: 35, height:35, backgroundColor: 'white', left:100, borderRadius: 22, top: 5}}>
+        <View style={{flexDirection:'row', alignContent:'space-between', left: 34 ,width: 355, height: 40, backgroundColor:'white', marginTop:23, borderRadius: 25}}>
 
-          <FontAwesome name="plus" size={24} color="#273c75" style={{top:6, left:8}}/>   
-          </View>       
-          </Pressable>
-          
-        
+          <FontAwesome5 name="search" size={24} color="#273c75" style={{top:7, left:5, paddingLeft:10}} />
 
-        <View style={{width: 35, height:35, backgroundColor: 'white', left:130, borderRadius: 22, top: 5}}>
-          {/* <Entypo name="home" size={24} color="#273c75" style={{top:4, left:5}} /> */}
-          <AntDesign name="message1" size={24} color="#273c75" style={{top:6, left:6}} />
+          <TextInput style={{left:12, width:290}}/>
+
         </View>
-
-        
-          <Pressable onPress={() => {navigation.navigate('sidebars1')}}>
-            <View style={{width: 35, height:35, backgroundColor: 'white', left:160, borderRadius: 22, top: 5 }} >
-            <FontAwesome5 name="user-alt" size={24} color="#273c75" style={{top:4, left:5}}  /> 
-            </View>      
-          </Pressable>
-        
-
-        <View style={{right:195, flexDirection:'row'}}>
-          <TextInput style={{width: 320, height:35, top:50, paddingLeft:10, backgroundColor:'white', borderRadius:15}} placeholder="Your Current Location"/>
-          <View style={{width: 35, height:35, backgroundColor: 'white', left:5, borderRadius: 22, top: 50}}>
-          <FontAwesome5 name="search" size={24} color="#273c75" style={{top:4, left:5}} />        
-        </View>
-        </View>
-
-
-
-        {/* <Text style={styles.yourCurrentLocation}>{`Your Current Location `}</Text> */}
-
 
       </View>
-      <Image
-        style={[styles.img3061Icon, styles.iconLayout]}
-        contentFit="cover"
-        source={require("../assets/img-3061.png")}
-      />
-      {/* <Image
-        style={[styles.vectorIcon2, styles.vectorIconLayout1]}
-        contentFit="cover"
-        source={require("../assets/vector3.png")}
-      /> */}
-      <Feather style={[styles.vectorIcon2, styles.vectorIconLayout1]} name="heart" size={24} color="black" />
 
-      
-      {/* <Image
-        style={[styles.vectorIcon3, styles.vectorIconLayout]}
-        contentFit="cover"
-        source={require("../assets/vector4.png")}
-      /> */}
-      <FontAwesome6 style={[styles.vectorIcon3, styles.vectorIconLayout]} name="message" size={24} color="black" />
+      <ScrollView style={{marginBottom:150}}>
+          <View style={{flexDirection:'row', alignContent:'space-evenly', marginTop:3, left:2}}>
+            <View style={{flexDirection:'row', alignContent:'center', backgroundColor:'#808e9b', width:70, height:30, borderRadius:34}}>
+              <Text style={{fontSize:15, alignContent:'center', paddingLeft: 25, paddingTop:4, color:'white', fontWeight:'bold'}}>All</Text>
+            </View>
 
-      {/* <Image
-        style={[styles.vectorIcon4, styles.vectorIconLayout1]}
-        contentFit="cover"
-        source={require("../assets/vector5.png")}
-      /> */}
-      <Feather style={[styles.vectorIcon4, styles.vectorIconLayout1]} name="heart" size={24} color="black" />
-      {/* <Image
-        style={[styles.vectorIcon5, styles.vectorIconLayout]}
-        contentFit="cover"
-        source={require("../assets/vector6.png")}
-      /> */}
-      <FontAwesome6 style={[styles.vectorIcon5, styles.vectorIconLayout]} name="message" size={24} color="black" />
+            <View style={{flexDirection:'row', alignContent:'center', backgroundColor:'#fe8787', width:70, height:30, borderRadius:34, left: 4}}>
+              <Text style={{fontSize:15, alignContent:'center', paddingLeft: 11, paddingTop:4, color:'white'}}>Danger</Text>            
+            </View>
+
+            <View style={{flexDirection:'row', alignContent:'center', backgroundColor:'#ffa06a', width:70, height:30, borderRadius:34, left: 8}}>
+              <Text style={{fontSize:15, alignContent:'center', paddingLeft: 7, paddingTop:4, color:'white'}}>Warning</Text>
+            </View>
+
+            <View style={{flexDirection:'row', alignContent:'center', backgroundColor:'#ffe144', width:70, height:30, borderRadius:34, left: 12}}>
+              <Text style={{fontSize:15, alignContent:'center', paddingLeft: 9, paddingTop:4, color:'white'}}>Caution</Text>
+            </View>
+
+            <View style={{flexDirection:'row', alignContent:'center', backgroundColor:'#74b9ff', width:70, height:30, borderRadius:34, left: 16}}>
+              <Text style={{fontSize:15, alignContent:'center', paddingLeft: 12, paddingTop:4, color:'white'}}>Notice</Text>
+            </View>
+          </View>
 
 
 
-      {/* <Image
-        style={[styles.vectorIcon6, styles.vectorIconLayout1]}
-        contentFit="cover"
-        source={require("../assets/vector7.png")}
 
-      /> */}
 
-      <AntDesign style={[styles.vectorIcon7, styles.vectorIconLayout1]} name="heart" size={24} color="pink" />
 
-      <FontAwesome6 style={[styles.vectorIcon6, styles.vectorIconLayout]} name="message" size={24} color="black" />
 
-      {/* <Image
-        style={[styles.vectorIcon7, styles.vectorIconLayout]}
-        contentFit="cover"
-        source={require("../assets/vector8.png")}
-      /> */}
-     
-    </View>
+          <View style={{flexDirection:'column', marginBottom:3, marginTop:12, backgroundColor:"#FE8787", width:405, height: 300, left: -23}}>
+                    
+              <View style={{flexDirection: 'row', alignContent:'space-between', marginTop:5}}>
+                <Image 
+                  source={require('../assets/img-3057.png')}
+                  style={{width: 50, height: 50, borderRadius:24, left:34, top:10}} // replace 100 with the desired width and height
+                />  
+                <View style={{flexDirection: 'column', alignContent:'space-between', marginTop:10}}>
+                    <Text style={{left: 40, fontSize:15}}>Williams Brown</Text>
+                    <Text style={{left:40, fontSize:10}}>Toronto, Ontario</Text>
+                </View>
 
-    </ScrollView>
+                <Entypo name="warning" size={24} color="red" style={{left:130, top:10}}/>
+                <Text style={{left:140, fontSize:15, top:10, color:"red"}}>Danger</Text>
+
+              </View>
+
+              <Image 
+                  source={require('../assets/img-3063.png')}
+                  style={{width: 350, height: 170, left:34, top:20}} // replace 100 with the desired width and height
+                /> 
+
+              <View style={{flexDirection: 'row', alignContent:'space-between', marginTop:25}}>
+                <AntDesign style={{left:40, top:10}} name="heart" size={30} color="pink" />
+
+                <Feather style={{left:60, top:10}} name="message-circle" size={30} color="#273c75" />
+
+                <Feather style={{left:80, top:10}} name="send" size={30} color="#273c75" />
+
+              </View>
+
+          </View>
+          <View style={{flexDirection:"column", marginTop:12, left:1, marginBottom:15}}>
+            <Text>54 likes</Text>
+            <Text>View all 10 comments</Text>
+ 
+
+            <View style={{flexDirection:"column", marginTop:12, left:1}}>
+              <Text style={{fontWeight:'bold'}}>Williams Brown</Text>
+              <Text>Protect your home with smart security system ...</Text>    
+            </View>
+
+            <View style={{flexDirection:"row", alignContent: 'space-between',marginTop:12}}>
+              <View style={{flexDirection:'row', alignContent:'center', left:5, backgroundColor:'#D9D9D9', width:45, height:45, borderRadius:34}}>
+              </View>
+              <Text style={{left: 9, top:9, fontSize:15, color:"#b2bec3"}}>Add comment ...</Text>
+
+            </View>
+
+            <Text style={{left: 9, top:9, fontSize:15, color:"#b2bec3"}}>3 hours ago</Text>
+            
+          </View>
+
+
+
+
+
+
+
+
+
+
+
+
+          <View style={{flexDirection:'column', marginBottom:3, marginTop:35, backgroundColor:"#FE8787", width:405, height: 300, left: -23}}>
+                    
+              <View style={{flexDirection: 'row', alignContent:'space-between', marginTop:5}}>
+                <Image 
+                  source={require('../assets/img-3069.png')}
+                  style={{width: 50, height: 50, borderRadius:24, left:34, top:10}} // replace 100 with the desired width and height
+                />  
+                <View style={{flexDirection: 'column', alignContent:'space-between', marginTop:10}}>
+                    <Text style={{left: 40, fontSize:15}}>Ana Thomas</Text>
+                    <Text style={{left:40, fontSize:10}}>Toronto, Ontario</Text>
+                </View>
+
+                <Entypo name="warning" size={24} color="red" style={{left:130, top:10}}/>
+                <Text style={{left:140, fontSize:15, top:10, color:"red"}}>Danger</Text>
+
+              </View>
+
+              
+              <View style={{flexDirection:'row'}}>
+                <Image 
+                    source={require('../assets/img-3068.png')}
+                    style={{width: 175, height: 170, left:34, top:20}} // replace 100 with the desired width and height
+                  /> 
+                  <Image 
+                    source={require('../assets/img-3067.png')}
+                    style={{width: 175, height: 170, left:34, top:20}} // replace 100 with the desired width and height
+                  /> 
+              </View>
+
+              <View style={{flexDirection: 'row', alignContent:'space-between', marginTop:25}}>
+                <AntDesign style={{left:40, top:10}} name="heart" size={30} color="pink" />
+
+                <Feather style={{left:60, top:10}} name="message-circle" size={30} color="#273c75" />
+
+                <Feather style={{left:80, top:10}} name="send" size={30} color="#273c75" />
+
+              </View>
+
+          </View>
+          <View style={{flexDirection:"column", marginTop:12, left:1, marginBottom:15}}>
+            <Text>54 likes</Text>
+            <Text>View all 10 comments</Text>
+ 
+
+            <View style={{flexDirection:"column", marginTop:12, left:1}}>
+              <Text style={{fontWeight:'bold'}}>Ava Thomas</Text>
+              <Text>Beware fo suspicious activities in time parking lot ...</Text>    
+            </View>
+
+            <View style={{flexDirection:"row", alignContent: 'space-between',marginTop:12}}>
+              <View style={{flexDirection:'row', alignContent:'center', left:5, backgroundColor:'#D9D9D9', width:45, height:45, borderRadius:34}}>
+              </View>
+              <Text style={{left: 9, top:9, fontSize:15, color:"#b2bec3"}}>Add comment ...</Text>
+
+            </View>
+
+            <Text style={{left: 9, top:9, fontSize:15, color:"#b2bec3"}}>24 hours ago</Text>
+            
+          </View>
+
+
+
+
+
+
+
+
+
+          <View style={{flexDirection:'column', marginBottom:3, marginTop:35, backgroundColor:"#fab1a0", width:405, height: 370, left: -23}}>
+                    
+              <View style={{flexDirection: 'row', alignContent:'space-between', marginTop:5}}>
+                <Image 
+                  source={require('../assets/img-3060.png')}
+                  style={{width: 50, height: 50, borderRadius:24, left:34, top:10}} // replace 100 with the desired width and height
+                />  
+                <View style={{flexDirection: 'column', alignContent:'space-between', marginTop:10}}>
+                    <Text style={{left: 40, fontSize:15}}>Huda Zaky</Text>
+                    <Text style={{left:40, fontSize:10}}>Markham, Ontario</Text>
+                </View>
+
+                <Entypo name="warning" size={24} color="#e17055" style={{left:130, top:10}}/>
+                <Text style={{left:140, fontSize:15, top:10, color:"#e17055"}}>Warning</Text>
+
+              </View>
+
+              
+              <View style={{flexDirection:'row'}}>
+                <Image 
+                    source={require('../assets/img-3065.png')}
+                    style={{width: 350, height: 240, left:34, top:20}} // replace 100 with the desired width and height
+                  /> 
+                  
+              </View>
+
+              <View style={{flexDirection: 'row', alignContent:'space-between', marginTop:25}}>
+                <AntDesign style={{left:40, top:10}} name="heart" size={30} color="pink" />
+
+                <Feather style={{left:60, top:10}} name="message-circle" size={30} color="#273c75" />
+
+                <Feather style={{left:80, top:10}} name="send" size={30} color="#273c75" />
+
+              </View>
+
+          </View>
+          <View style={{flexDirection:"column", marginTop:12, left:1, marginBottom:15}}>
+            <Text>54 likes</Text>
+            <Text>View all 10 comments</Text>
+ 
+
+            <View style={{flexDirection:"column", marginTop:12, left:1}}>
+              <Text style={{fontWeight:'bold'}}>Huda Zaky</Text>
+              <Text>Join us for a neighborhood cleanup event ...</Text>    
+            </View>
+
+            <View style={{flexDirection:"row", alignContent: 'space-between',marginTop:12}}>
+              <View style={{flexDirection:'row', alignContent:'center', left:5, backgroundColor:'#D9D9D9', width:45, height:45, borderRadius:34}}>
+              </View>
+              <Text style={{left: 9, top:9, fontSize:15, color:"#b2bec3"}}>Add comment ...</Text>
+
+            </View>
+
+            <Text style={{left: 9, top:9, fontSize:15, color:"#b2bec3"}}>5 hours ago</Text>
+            
+          </View>
+
+
+
+
+
+
+
+
+
+
+          <View style={{flexDirection:'column', marginBottom:3, marginTop:35, backgroundColor:"#ffeaa7", width:405, height: 380, left: -23}}>
+                    
+              <View style={{flexDirection: 'row', alignContent:'space-between', marginTop:5}}>
+                <Image 
+                  source={require('../assets/img-3061.png')}
+                  style={{width: 50, height: 50, borderRadius:24, left:34, top:10}} // replace 100 with the desired width and height
+                />  
+                <View style={{flexDirection: 'column', alignContent:'space-between', marginTop:10}}>
+                    <Text style={{left: 40, fontSize:15}}>Rachael Smith</Text>
+                    <Text style={{left:40, fontSize:10}}>Guelph, Ontario</Text>
+                </View>
+
+                <Entypo name="warning" size={24} color="#fdcb6e" style={{left:130, top:10}}/>
+                <Text style={{left:140, fontSize:15, top:10, color:"#fdcb6e"}}>Caution</Text>
+
+              </View>
+
+              
+              <View style={{flexDirection:'row'}}>
+                <Image 
+                    source={require('../assets/img-3062.png')}
+                    style={{width: 350, height: 250, left:34, top:20}} // replace 100 with the desired width and height
+                  /> 
+                  
+              </View>
+
+              <View style={{flexDirection: 'row', alignContent:'space-between', marginTop:25}}>
+                <AntDesign style={{left:40, top:10}} name="heart" size={30} color="pink" />
+
+                <Feather style={{left:60, top:10}} name="message-circle" size={30} color="#273c75" />
+
+                <Feather style={{left:80, top:10}} name="send" size={30} color="#273c75" />
+
+              </View>
+
+          </View>
+          <View style={{flexDirection:"column", marginTop:12, left:1, marginBottom:15}}>
+            <Text>54 likes</Text>
+            <Text>View all 10 comments</Text>
+ 
+
+            <View style={{flexDirection:"column", marginTop:12, left:1}}>
+              <Text style={{fontWeight:'bold'}}>Huda Zaky</Text>
+              <Text>Join us for a neighborhood cleanup event ...</Text>    
+            </View>
+
+            <View style={{flexDirection:"row", alignContent: 'space-between',marginTop:12}}>
+              <View style={{flexDirection:'row', alignContent:'center', left:5, backgroundColor:'#D9D9D9', width:45, height:45, borderRadius:34}}>
+              </View>
+              <Text style={{left: 9, top:9, fontSize:15, color:"#b2bec3"}}>Add comment ...</Text>
+
+            </View>
+
+            <Text style={{left: 9, top:9, fontSize:15, color:"#b2bec3"}}>2 days ago</Text>
+            
+          </View>
+
+
+
+
+      </ScrollView>
+
+
+    </SafeAreaView>
+    
   );
 };
 
@@ -223,316 +348,7 @@ const styles = StyleSheet.create({
     backgroundColor:"#ffff", 
      paddingHorizontal:10,
    },
-   headingText: {
-    fontSize:25,
-    textAlign:"center",
-    paddingBottom:5,
-    fontWeight:"bold"
-   },
-   text: {
-    fontSize:16
-   },
-  hudaZakyTypo: {
-    height: 26,
-    fontSize: 14,
-    width: 257,
-    textAlign: "left",
-    color: "#000",
-    // fontFamily: 'regular',
-    position: "absolute",
-  },
-  iconLayout1: {
-    // maxHeight: "200%",
-    // maxWidth: "150%",
-    //overflow: "hidden",
-  },
-  vectorPosition: {
-    // bottom: "99.71%",
-    position: "absolute",
-  },
-  mainLayout: {
-    width: 85,
-    borderRadius: 5,
-    top: 143,
-    height: 25,
-    position: "absolute",
-  },
-  noticeTypo: {
-    top: 146,
-    width: 58,
-    color: "#fff",
-    fontSize: 14,
-    height: 20,
-    textAlign: "left",
-    // fontFamily: 'regular',
-    position: "absolute",
-  },
-  rectangleIconLayout: {
-    height: 225,
-    width: 397,
-    position: "absolute",
-  },
-  ontarioTypo: {
-    fontSize: 8,
-    textAlign: "left",
-    color: "#000",
-    // fontFamily: FontFamily.interRegular,
-    position: "absolute",
-  },
-  iconLayout: {
-    borderRadius: 100,
-    position: "absolute",
-  },
-  vectorIconLayout1: {
-    left: "6.74%",
-    right: "7.13%",
-    // width: "5.13%",
-    // height: "1.72%",
-    // maxHeight: "100%",
-    // maxWidth: "100%",
-    position: "absolute",
-    overflow: "hidden",
-  },
-  vectorIconLayout: {
-    left: "18.49%",
-    right: "75.38%",
-    // width: "5.13%",
-    // height: "1.72%",
-    // maxHeight: "100%",
-    // maxWidth: "100%",
-    position: "absolute",
-    overflow: "hidden",
-  },
-  mainPageChild: {
-    marginTop: -470,
-    marginLeft: -172,
-    borderRadius: 2,
-    width: 352,
-    height: 25,
-    left: "50%",
-    top: "50%",
-    position: "absolute",
-    color: "rgba(0,0,0,0.35)"
-  },
-  yourCurrentLocation: {
-    top: 82,
-    left: 55,
-    fontSize: 10,
-    height: 20,
-    width: 257,
-    textAlign: "left",
-    color: "#000",
-    // fontFamily: 'regular',
-    position: "absolute",
-  },
-  williamsBrown: {
-    left: 59,
-    top: 222,
-  },
-  hudaZaky: {
-    left: 58,
-    top: 521,
-  },
-  rachaelSmith: {
-    left: 61,
-    top: 821,
-  },
-  recentEvents: {
-    top: 186,
-    left: 29,
-    fontSize: 14,
-    height: 20,
-    width: 257,
-    textAlign: "left",
-    color: "#000",
-    // fontFamily: 'regular',
-    position: "absolute",
-  },
-  vectorIcon: {
-    // height: "0.94%",
-    // width: "2.05%",
-    top: "6.2%",
-    // right: "90%",
-    // bottom: "91.85%",
-    left: "6.95%",
-    position: "absolute",
-  },
-  vectorIcon1: {
-    // height: "1.29%",
-    width: "10.62%",
-    top: "3.5%",
-    right: "88.21%",
-    left: "2.18%",
-    // maxHeight: "100%",
-    // maxWidth: "100%",
-    overflow: "hidden",
-  },
-  icon: {
-    // height: "100%",
-    // width: "100%",
-    top: "50%",
-  },
-  vector: {
-    left: "89.74%",
-    top: "2.4%",
-    right: "4.36%",
-    width: "5.9%",
-    height: "1.89%",
-  },
-  mainPageItem: {
-    left: 26,
-    backgroundColor: "#fe8787",
-  },
-  mainPageInner: {
-    left: 115,
-    backgroundColor: "#ffa06a",
-  },
-  rectangleView: {
-    left: 204,
-    backgroundColor: "#ffe144",
-  },
-  danger: {
-    marginTop: -423,
-    marginLeft: -148,
-    width: 58,
-    color: "#fff",
-    fontWeight: 'bold',
-    // fontWeight: "700",
-    fontSize: 14,
-    height: 20,
-    textAlign: "left",
-    left: "50%",
-    top: "50%",
-    position: "absolute",
-  },
-  warning: {
-    left: 130,
-  },
-  caution: {
-    left: 222,
-  },
-  mainPageChild1: {
-    left: 293,
-    backgroundColor: "#85b6ff",
-    width: 82,
-    borderRadius: 5,
-    top: 143,
-    height: 25,
-    position: "absolute",
-  },
-  notice: {
-    left: 314,
-  },
-  rectangleIcon: {
-    top: 275,
-    left: 20,
-  },
-  mainPageChild2: {
-    top: 575,
-    left: 20,
-    backgroundColor: "#d9d9d9",
-  },
-  torontoOntario: {
-    top: 238,
-    left: 59,
-  },
-  markhamOntario: {
-    top: 538,
-    width: 68,
-    height: 9,
-    left: 58,
-  },
-  guelphOntario: {
-    top: 837,
-    width: 151,
-    left: 61,
-  },
-  img3057Icon: {
-    left: 17,
-    width: 38,
-    height: 37,
-    top: 222,
-  },
-  frameView: {
-    top: 265,
-    left: 132,
-    borderRadius: 20,
-    width: 40,
-    height: 40,
-    position: "absolute",
-    overflow: "hidden",
-  },
-  img3060Icon: {
-    left: 16,
-    width: 39,
-    height: 38,
-    top: 521,
-  },
-  near1: {
-    fontWeight: 'bold',
-    //fontWeight: "700",
-    paddingLeft: 10,
-    top: 6
-  },
-  text: {
-    // fontFamily: 'regular',
-  },
-  near: {
-    marginTop: -540,
-    marginLeft: -45,
-    fontSize: 35,
-    width: 500,
-    height: 100,
-    textAlign: "left",
-    color: "#000",
-    left: 45,
-    top: "50%",
-    position: "absolute", 
-    backgroundColor: "#74b9ff",
-  },
-  img3061Icon: {
-    left: 20,
-    width: 35,
-    height: 36,
-    top: 821,
-  },
-  vectorIcon2: {
-    top: "65.98%",
-    bottom: "32.5%",
-  },
-  vectorIcon3: {
-    top: "66.19%",
-    bottom: "32.59%",
-  },
-  vectorIcon4: {
-    top: "39.80%",
-    bottom: "58.23%",
-  },
-  vectorIcon5: {
-    top: "39.97%",
-    bottom: "58.32%",
-  },
-  vectorIcon6: {
-    top: "91.68%",
-    bottom: "6.6%",
-  },
-  vectorIcon7: {
-    top: "91.6%",
-    bottom: "6.69%",
-  },
-  mainPage: {
-    backgroundColor: "#fff",
-    borderStyle: "solid",
-    borderColor: "#000",
-    borderWidth: 1,
-    flex: 1,
-    height: 1166,
-    overflow: "hidden",
-    width: "100%",
-    
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
-
-  },
+   
 });
 
 export default MainPage;

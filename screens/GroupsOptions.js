@@ -15,7 +15,7 @@ export default GroupsOptions = ({navigation}) => {
                     
                     <View style={{backgroundColor:'white', paddingLeft:20, paddingRight:20, paddingBottom:10, paddingTop:10, borderRadius:20, flexDirection:'row'}}>
                         
-                        <Pressable style={{flexDirection:'row'}}>
+                        <Pressable style={{flexDirection:'row'}} onPress={()=>{navigation.navigate('ContactsOptions')}}>
                             <FontAwesome5 name="user-friends" size={24} color="black" />
                             <Text style={{fontWeight:'bold'}}>Connections</Text>
                         </Pressable>
