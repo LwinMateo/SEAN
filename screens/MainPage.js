@@ -8,9 +8,9 @@ const MainPage = ({navigation}) => {
     <SafeAreaView style={[styles.container]}>
       <View style={{flexDirection:'column', marginBottom:10, backgroundColor:"#74b9ff", width:905, height: 130, left: -23}}>
 
-        <View style={{flexDirection:'row', alignContent:'space-between'}}>
-          <Text style={{fontSize:24, fontWeight:'bold', right: -34, marginTop:7}}>NEAR</Text>
-          <View style={{flexDirection:'row', left:104, marginTop:7}}>
+        <View style={{flexDirection:'row', alignContent:'center'}}>
+          <Text style={{fontSize:34, fontWeight:'bold', right: -170, marginTop:5}}>NEAR</Text>
+          {/* <View style={{flexDirection:'row', left:104, marginTop:7}}>
             <View style={{flexDirection:'row', alignContent:'center', left:14, backgroundColor:'white', width:45, height:45, borderRadius:34}}>
               <Entypo name="home" size={24} color="#273c75" style={{top:9, left:10}} />
             </View>
@@ -34,7 +34,7 @@ const MainPage = ({navigation}) => {
             </Pressable>
 
 
-          </View>
+          </View> */}
         </View>
 
         <View style={{flexDirection:'row', alignContent:'space-between', left: 34 ,width: 355, height: 40, backgroundColor:'white', marginTop:23, borderRadius: 25}}>

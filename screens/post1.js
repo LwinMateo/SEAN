@@ -9,31 +9,39 @@ export default Post1 = ({navigation}) => {
 
             <View style={{flexDirection:'row', alignContent:'space-between'}}>
                 <Image source={require('../assets/Allura Heart.png')} style={{left:120, top:110}}/>
-                <Image source={require('../assets/Hands Give1.png')} style={{left:175}}/>
+                <Text style={{left:375, top:-57, fontWeight:'bold', color:'white', transform:[{rotate:'260deg'}], zIndex:1}}>NEAR</Text>
+                <Image source={require('../assets/Hands Give1.png')} style={{left:140}}/>
             </View>
 
             <View style={{flexDirection:'row', alignContent:'space-between', top:-290}}>
                 <Image source={require('../assets/Allura Heart (1).png')} style={{left:280, top:150}}/>
-                <Image source={require('../assets/Hands Give2.png')} style={{right:47}}/>
+                <Text style={{left:-50, top:50, fontWeight:'bold', color:'white', transform:[{rotate:'76deg'}], zIndex:1}}>NEAR</Text>
+
+                <Image source={require('../assets/Hands Give2.png')} style={{right:85}}/>
             </View>
 
             <View style={{flexDirection:'row', alignContent:'space-between', top:-540}}>
                 <Image source={require('../assets/Allura Heart (2).png')} style={{left:80, top:190}}/>
-                <Image source={require('../assets/Hands Give3.png')} style={{left:130}}/>
+                <Text style={{left:369, top:35, fontWeight:'bold', color:'white', transform:[{rotate:'282deg'}], zIndex:1}}>NEAR</Text>
+
+                <Image source={require('../assets/Hands Give3.png')} style={{left:95}}/>
             </View>
 
             <View style={{flexDirection:'row', alignContent:'space-between', top:-750}}>
                 <Image source={require('../assets/Allura Heart (3).png')} style={{left:280, top:100}}/>
-                <Image source={require('../assets/Hands Give4.png')} style={{right:75}}/>
+                <Text style={{left:-5, top:23, fontWeight:'bold', color:'white', transform:[{rotate:'76deg'}], zIndex:1}}>NEAR</Text>
+
+                <Image source={require('../assets/Hands Give4.png')} style={{right:110}}/>
             </View>
 
             
 
-            <View style={{justifyContent:'center', alignContent:'center'}}>
-                <Text style={{fontSize: 24, fontWeight:'bold', top:-734, paddingLeft:35, paddingRight:35}}>The answer to our problem is in our hands. Found those near you.</Text>
+            <View style={{justifyContent:'column', alignContent:'center'}}>
+                <Text style={{fontSize: 24, fontWeight:'bold', top:-764, paddingLeft:35, paddingRight:35}}>The answer to our problem is in our hands. Found those near you.</Text>
+                <Text style={{fontSize: 20, fontWeight:'bold', top:-754, paddingLeft:35, paddingRight:35, color:"#B9744D"}}>one action at a Time</Text>
             </View>
-
-            <View style={{flexDirection:'row', alignContent:'space-between', top: -690}}>
+            
+            <View style={{flexDirection:'row', alignContent:'space-between', top: -710}}>
                 <Pressable onPress={()=>{navigation.navigate('MainPage')}}>
                     <Text style={{fontSize:24, paddingLeft:20, color:"#273c75"}}>Skip</Text>
                 </Pressable>

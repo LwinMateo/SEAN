@@ -27,19 +27,19 @@ export default StudentSupport = () => {
                 </View>
 
 
-                <View style={{top: 65, left:9, width: 500, height: 125, flexDirection:'row'}}>
+                <View style={{top: 65, left:9, width: 500, height: 160, flexDirection:'row'}}>
 
                     <View style={{top: 34, left: 110, backgroundColor:'#74b9ff', width: 250, borderRadius:25, paddingTop:23, paddingLeft:12}}>
-                        <Text style={{fontSize: 20}}>Hey, anyone else feeling overwhelmed by the workload this semester?</Text>
+                        <Text style={{fontSize: 20}}>I hear you. Have you tried setting a schedule or breaknig down tasks into asmaller, manageable chunks?</Text>
                                     
                     </View>
                 </View>
 
-                <View style={{top: 100, left:-5, width: 500, height: 125, flexDirection:'row'}}>
+                <View style={{top: 100, left:-5, width: 500, height: 140, flexDirection:'row'}}>
                     <Image source={require("../assets/IMG_3074.png")} style={{top: 24, left:20}}/>
 
                     <View style={{top: 34, left: 30, backgroundColor:'#ced6e0', width: 250, borderRadius:25, paddingTop:23, paddingLeft:12}}>
-                        <Text style={{fontSize: 20}}>Hey, anyone else feeling overwhelmed by the workload this semester?</Text>
+                        <Text style={{fontSize: 20}}>That's a good idea, Ava, I'll give that a try to see if it helps me stay on top of things.</Text>
                                     
                     </View>
                 </View>

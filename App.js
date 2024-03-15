@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import {Image} from 'react-native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Entypo, FontAwesome5, FontAwesome, MaterialIcons } from '@expo/vector-icons'; // for the icons
 
 import MainPage from "./screens/MainPage";
 import IntroScreen from "./screens/IntroScreen";
@@ -27,16 +30,20 @@ import Post3 from './screens/post3'
 const App = () => {
   const [hideSplashScreen, setHideSplashScreen] = useState(true);
 
-  // const [fontsLoaded, error] = useFonts({
-  //   "Inter-Regular": require("./assets/fonts/Inter-Regular.ttf"),
-  //   "Inter-Bold": require("./assets/fonts/Inter-Bold.ttf"),
-  // });
-
-  // if (!fontsLoaded && !error) {
-  //   return null;
-  // }
 
   const Stack = createNativeStackNavigator();
+  const Tab = createBottomTabNavigator();
+
+  function MainTabs() {
+    return (
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={MainPage} options={{headerShown: false, tabBarIcon: ()=>{return(<Entypo name="home" size={24} color="#273c75" />)}}} />
+        <Tab.Screen name="Post" component={Post} options={{headerShown: false, tabBarIcon: ()=>{return(<FontAwesome5 name="plus" size={24} color="#273c75" />)}}}/>
+        <Tab.Screen name="Contacts" component={ContactsOptions} options={{headerShown:false, tabBarIcon: ()=>{return(<MaterialIcons name="message" size={24} color="#273c75" />)}}}/>
+        <Tab.Screen name="Profile" component={sidebars1} options={{headerShown: false, tabBarIcon: ()=>{return(<FontAwesome5 name="user-alt" size={24} color="#273c75" />)}}}/>
+      </Tab.Navigator>
+    );
+  }
 
   return (
     <NavigationContainer>
@@ -64,7 +71,7 @@ const App = () => {
           />
           <Stack.Screen
             name="MainPage"
-            component={MainPage}
+            component={MainTabs}
             options={{ headerShown: false }}
           />
           <Stack.Screen
@@ -75,13 +82,36 @@ const App = () => {
           <Stack.Screen
             name="ContactsOptions"
             component={ContactsOptions}
-            options={{ headerShown: true, headerTitle: "Contacts", headerStyle: { backgroundColor: "#74b9ff"}}}
+            options={{ 
+              headerShown: true, 
+              headerTitle: "Contacts", 
+              headerStyle: { backgroundColor: "#74b9ff"}, 
+              headerTitleAlign:'center',
+              headerRight: () => (
+                <Image 
+                  source={require('./assets/img-3069.png')} // replace with your image path
+                  style={{ width: 40, height: 40, marginRight: 10, borderRadius:23 }} // adjust size and margin as needed
+                />
+              )
+            }}
             
           />
           <Stack.Screen
             name="GroupsOptions"
             component={GroupsOptions}
-            options={{ headerShown: true, headerStyle: { backgroundColor: "#74b9ff"}}}
+            options={{ 
+              headerShown: true, 
+              headerTitle: "Contacts", 
+              headerStyle: { backgroundColor: "#74b9ff"}, 
+              headerTitleAlign:'center',
+              headerRight: () => (
+                <Image 
+                  source={require('./assets/img-3069.png')} // replace with your image path
+                  style={{ width: 40, height: 40, marginRight: 10, borderRadius:23 }} // adjust size and margin as needed
+                />
+              )
+            }}
+              
           />
 
           <Stack.Screen
@@ -117,6 +147,7 @@ const App = () => {
 
         </Stack.Navigator>
       ) : null}
+      
 
     </NavigationContainer>
   );

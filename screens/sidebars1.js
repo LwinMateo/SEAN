@@ -6,7 +6,7 @@ import { AntDesign, FontAwesome5, SimpleLineIcons, Feather } from "@expo/vector-
 const SideBars1 = ({navigation}) => {
   return (
     <ScrollView style={[styles.container]}>
-        <SafeAreaView style={{flexDirection:'column', justifyContent:'center', paddingTop:30, paddingBottom:350}}>
+        <SafeAreaView style={{flexDirection:'column', justifyContent:'center', paddingBottom:230}}>
 
             <View style={{flexDirection:'column', marginTop:'30%'}}>
                 <Image
@@ -30,13 +30,7 @@ const SideBars1 = ({navigation}) => {
             </View>
 
 
-            <View style={{flexDirection: "row", left: 115, top:50, width:160, backgroundColor: "#74b9ff", justifyContent:'center', borderRadius:50}}>
-                <Pressable onPress={()=>{navigation.navigate('ContactsOptions')}}>
-
-                    <Text style={{fontSize:15, marginTop:10, marginBottom:10, paddingLeft:5, paddingRight:5, color:'white'}}>Contacts and Groups</Text>
-
-                </Pressable>
-            </View>
+            
 
 
             <View style={{flexDirection: "row", left: 30, top:100, borderBottomWidth:1, width: 100, borderBottomColor:"#95a5a6"}}>

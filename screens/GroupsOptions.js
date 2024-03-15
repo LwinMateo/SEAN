@@ -44,7 +44,7 @@ export default GroupsOptions = ({navigation}) => {
                 <ScrollView>
                     <View style={{top:14, paddingBottom:300}}>
                         
-                        <Pressable onPress={()=>{navigation.navigate('StudentSupport')}}>
+                        
                         <View style={{top: 10, left:-5, width: 500, height: 125, backgroundColor:'white', flexDirection:'row'}}>
                             <Image source={require("../assets/pexels-photo-335393 2.png")} style={{top: 24, left:20}}/>
 
@@ -57,14 +57,19 @@ export default GroupsOptions = ({navigation}) => {
                                 </View>
 
 
-                                <View style={{flexDirection:"row", left:160, top:-40, justifyContent: 'space-between'}}>
-                                    <AntDesign name="message1" size={24} color="#74b9ff" />
-                                    <Entypo name="phone" size={24} color="#74b9ff" />
+                                <View style={{flexDirection:"row", left:170, top:-50, justifyContent: 'space-between'}}>
+                                    <Pressable onPress={()=>{navigation.navigate('StudentSupport')}}>
+                                        <View style={{flexDirection:'row', alignContent:'center', left:14, backgroundColor:'white', width:40, height:40, borderRadius:34, borderWidth:2, borderColor:"#273c75"}}>
+                                            <AntDesign name="message1" size={24} color="#273c75" style={{left:6, top:6}}/>
+                                        </View>
+                                    </Pressable>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:-15, backgroundColor:'#2D77BC', width:40, height:40, borderRadius:34}}>
+                                        <Entypo name="phone" size={24} color="white" style={{left:8, top:8}}/>
+                                    </View>
                                 </View>
                             </View>
 
                         </View>
-                        </Pressable>
 
 
 
@@ -74,7 +79,7 @@ export default GroupsOptions = ({navigation}) => {
                             <Image source={require("../assets/Toronto-Neighbourhood-Guide-Streetsville12 2.png")} style={{top: 24, left:20}}/>
 
                             <View style={{top: 34, left: 30}}>
-                                <Text style={{fontSize: 15, fontWeight: 'bold'}}>Streetsville Neighbourhood</Text>
+                                <Text style={{fontSize: 14, fontWeight: 'bold'}}>Streetsville Neighbourhood</Text>
                                 <Text style={{fontSize: 10}}>Calebmiller@Gmail.com</Text>
                                 <View style={{flexDirection:"row"}}>
                                 <Entypo name="location-pin" size={24} color="gray" />
@@ -82,9 +87,13 @@ export default GroupsOptions = ({navigation}) => {
                                 </View>
 
 
-                                <View style={{flexDirection:"row", left:160, top:-40, justifyContent: 'space-between'}}>
-                                    <AntDesign name="message1" size={24} color="#74b9ff" />
-                                    <Entypo name="phone" size={24} color="#74b9ff" style={{right:70}} />
+                                <View style={{flexDirection:"row", left:170, top:-50, justifyContent: 'space-between'}}>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:11, backgroundColor:'white', width:40, height:40, borderRadius:34, borderWidth:2, borderColor:"#273c75"}}>
+                                        <AntDesign name="message1" size={24} color="#273c75" style={{left:6, top:6}}/>
+                                    </View>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:-71, backgroundColor:'#2D77BC', width:40, height:40, borderRadius:34}}>
+                                        <Entypo name="phone" size={24} color="white" style={{left:8, top:8}}/>
+                                    </View>
                                 </View>
                             </View>
 
@@ -106,9 +115,13 @@ export default GroupsOptions = ({navigation}) => {
                                 </View>
 
 
-                                <View style={{flexDirection:"row", left:160, top:-40, justifyContent: 'space-between'}}>
-                                    <AntDesign name="message1" size={24} color="#74b9ff" />
-                                    <Entypo name="phone" size={24} color="#74b9ff" />
+                                <View style={{flexDirection:"row", left:170, top:-50, justifyContent: 'space-between'}}>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:11, backgroundColor:'white', width:40, height:40, borderRadius:34, borderWidth:2, borderColor:"#273c75"}}>
+                                        <AntDesign name="message1" size={24} color="#273c75" style={{left:6, top:6}}/>
+                                    </View>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:-15, backgroundColor:'#2D77BC', width:40, height:40, borderRadius:34}}>
+                                        <Entypo name="phone" size={24} color="white" style={{left:8, top:8}}/>
+                                    </View>
                                 </View>
                             </View>
 
@@ -126,9 +139,13 @@ export default GroupsOptions = ({navigation}) => {
                                 </View>
 
 
-                                <View style={{flexDirection:"row", left:160, top:-40, justifyContent: 'space-between'}}>
-                                    <AntDesign name="message1" size={24} color="#74b9ff" />
-                                    <Entypo name="phone" size={24} color="#74b9ff" />
+                                <View style={{flexDirection:"row", left:170, top:-50, justifyContent: 'space-between'}}>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:11, backgroundColor:'white', width:40, height:40, borderRadius:34, borderWidth:2, borderColor:"#273c75"}}>
+                                        <AntDesign name="message1" size={24} color="#273c75" style={{left:6, top:6}}/>
+                                    </View>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:-13, backgroundColor:'#2D77BC', width:40, height:40, borderRadius:34}}>
+                                        <Entypo name="phone" size={24} color="white" style={{left:8, top:8}}/>
+                                    </View>
                                 </View>
                             </View>
 

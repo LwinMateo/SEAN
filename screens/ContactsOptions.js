@@ -57,10 +57,15 @@ export default SignInScreen = ({navigation}) => {
                                 </View>
 
 
-                                <View style={{flexDirection:"row", left:160, top:-40, justifyContent: 'space-between'}}>
-                                    <AntDesign name="message1" size={24} color="#74b9ff" />
-                                    <Entypo name="phone" size={24} color="#74b9ff" />
+                                <View style={{flexDirection:"row", left:150, top:-50, justifyContent: 'space-between'}}>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:14, backgroundColor:'white', width:40, height:40, borderRadius:34, borderWidth:2, borderColor:"#273c75"}}>
+                                        <AntDesign name="message1" size={24} color="#273c75" style={{left:6, top:6}}/>
+                                    </View>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:5, backgroundColor:'#2D77BC', width:40, height:40, borderRadius:34}}>
+                                        <Entypo name="phone" size={24} color="white" style={{left:8, top:8}}/>
+                                    </View>
                                 </View>
+
                             </View>
 
                         </View>
@@ -81,9 +86,13 @@ export default SignInScreen = ({navigation}) => {
                                 </View>
 
 
-                                <View style={{flexDirection:"row", left:160, top:-40, justifyContent: 'space-between'}}>
-                                    <AntDesign name="message1" size={24} color="#74b9ff" />
-                                    <Entypo name="phone" size={24} color="#74b9ff" />
+                                <View style={{flexDirection:"row", left:150, top:-50, justifyContent: 'space-between'}}>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:14, backgroundColor:'white', width:40, height:40, borderRadius:34, borderWidth:2, borderColor:"#273c75"}}>
+                                        <AntDesign name="message1" size={24} color="#273c75" style={{left:6, top:6}}/>
+                                    </View>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:5, backgroundColor:'#2D77BC', width:40, height:40, borderRadius:34}}>
+                                        <Entypo name="phone" size={24} color="white" style={{left:8, top:8}}/>
+                                    </View>
                                 </View>
                             </View>
 
@@ -105,9 +114,13 @@ export default SignInScreen = ({navigation}) => {
                                 </View>
 
 
-                                <View style={{flexDirection:"row", left:160, top:-40, justifyContent: 'space-between'}}>
-                                    <AntDesign name="message1" size={24} color="#74b9ff" />
-                                    <Entypo name="phone" size={24} color="#74b9ff" />
+                                <View style={{flexDirection:"row", left:150, top:-50, justifyContent: 'space-between'}}>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:14, backgroundColor:'white', width:40, height:40, borderRadius:34, borderWidth:2, borderColor:"#273c75"}}>
+                                        <AntDesign name="message1" size={24} color="#273c75" style={{left:6, top:6}}/>
+                                    </View>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:5, backgroundColor:'#2D77BC', width:40, height:40, borderRadius:34}}>
+                                        <Entypo name="phone" size={24} color="white" style={{left:8, top:8}}/>
+                                    </View>
                                 </View>
                             </View>
 
@@ -125,9 +138,13 @@ export default SignInScreen = ({navigation}) => {
                                 </View>
 
 
-                                <View style={{flexDirection:"row", left:160, top:-40, justifyContent: 'space-between'}}>
-                                    <AntDesign name="message1" size={24} color="#74b9ff" />
-                                    <Entypo name="phone" size={24} color="#74b9ff" />
+                                <View style={{flexDirection:"row", left:150, top:-50, justifyContent: 'space-between'}}>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:14, backgroundColor:'white', width:40, height:40, borderRadius:34, borderWidth:2, borderColor:"#273c75"}}>
+                                        <AntDesign name="message1" size={24} color="#273c75" style={{left:6, top:6}}/>
+                                    </View>
+                                    <View style={{flexDirection:'row', alignContent:'center', left:-5, backgroundColor:'#2D77BC', width:40, height:40, borderRadius:34}}>
+                                        <Entypo name="phone" size={24} color="white" style={{left:8, top:8}}/>
+                                    </View>
                                 </View>
                             </View>
 

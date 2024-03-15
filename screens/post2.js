@@ -18,15 +18,12 @@ export default Post2 = ({navigation}) => {
 
             </View>
 
-            <View style={{justifyContent:'center', alignContent:'center', paddingTop:145}}>
-                <Text style={{fontSize: 24, fontWeight:'bold', paddingLeft:10, paddingRight:35}}>Take the lead</Text>
+            <View style={{justifyContent:'column', alignContent:'center'}}>
+                <Text style={{fontSize: 24, fontWeight:'bold', top:130, paddingLeft:35, paddingRight:85}}>Transform your community</Text>
+                <Text style={{fontSize: 20, fontWeight:'bold', top:130, paddingLeft:35, paddingRight:35, color:"#1C558A"}}>one action at a Time</Text>
             </View>
 
-            <View style={{justifyContent:'center', alignContent:'center', paddingTop:20}}>
-                <Text style={{fontSize: 24, paddingLeft:35, paddingRight:35}}>Be apart of the change </Text>
-            </View>
-
-            <View style={{flexDirection:'row', alignContent:'space-between', top: 45}}>
+            <View style={{flexDirection:'row', alignContent:'space-between', top: 160}}>
                 <Pressable onPress={()=>{navigation.navigate('MainPage')}}>
                     <Text style={{fontSize:24, paddingLeft:20, color:"#273c75"}}>Skip</Text>
                 </Pressable>
