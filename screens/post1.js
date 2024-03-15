@@ -37,10 +37,10 @@ export default Post1 = ({navigation}) => {
             
 
             <View style={{justifyContent:'column', alignContent:'center'}}>
-                <Text style={{fontSize: 24, fontWeight:'bold', top:-764, paddingLeft:35, paddingRight:35}}>The answer to our problem is in our hands. Found those near you.</Text>
+                <Text style={{fontSize: 24, fontWeight:'bold', top:-764, paddingLeft:35, paddingRight:75}}>Empower change with every tap</Text>
                 <Text style={{fontSize: 20, fontWeight:'bold', top:-754, paddingLeft:35, paddingRight:35, color:"#B9744D"}}>one action at a Time</Text>
             </View>
-            
+
             <View style={{flexDirection:'row', alignContent:'space-between', top: -710}}>
                 <Pressable onPress={()=>{navigation.navigate('MainPage')}}>
                     <Text style={{fontSize:24, paddingLeft:20, color:"#273c75"}}>Skip</Text>

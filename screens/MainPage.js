@@ -10,31 +10,7 @@ const MainPage = ({navigation}) => {
 
         <View style={{flexDirection:'row', alignContent:'center'}}>
           <Text style={{fontSize:34, fontWeight:'bold', right: -170, marginTop:5}}>NEAR</Text>
-          {/* <View style={{flexDirection:'row', left:104, marginTop:7}}>
-            <View style={{flexDirection:'row', alignContent:'center', left:14, backgroundColor:'white', width:45, height:45, borderRadius:34}}>
-              <Entypo name="home" size={24} color="#273c75" style={{top:9, left:10}} />
-            </View>
-
-            <Pressable onPress={()=>{navigation.navigate('Post')}}>
-            <View style={{flexDirection:'row', alignContent:'center', left:26, backgroundColor:'white', width:45, height:45, borderRadius:34}}>
-              
-                <FontAwesome name="plus" size={26} color="#273c75" style={{top:10, left:12}}/>
-                          
-            </View>
-            </Pressable>
-
-            <View style={{flexDirection:'row', alignContent:'center', left:38, backgroundColor:'white', width:45, height:45, borderRadius:34}}>
-              <AntDesign name="message1" size={24} color="#273c75" style={{top:10, left:11}} />
-            </View>
-
-            <Pressable onPress={()=>{navigation.navigate('sidebars1')}}>
-            <View style={{flexDirection:'row', alignContent:'center', left:50, backgroundColor:'white', width:45, height:45, borderRadius:34}}>
-              <FontAwesome5 name="user-alt" size={24} color="#273c75" style={{top:9, left:11}}  />
-            </View>
-            </Pressable>
-
-
-          </View> */}
+          
         </View>
 
         <View style={{flexDirection:'row', alignContent:'space-between', left: 34 ,width: 355, height: 40, backgroundColor:'white', marginTop:23, borderRadius: 25}}>
@@ -316,8 +292,8 @@ const MainPage = ({navigation}) => {
  
 
             <View style={{flexDirection:"column", marginTop:12, left:1}}>
-              <Text style={{fontWeight:'bold'}}>Huda Zaky</Text>
-              <Text>Join us for a neighborhood cleanup event ...</Text>    
+              <Text style={{fontWeight:'bold'}}>Rachael Smith</Text>
+              <Text>Beware of poisonous plants in the park…</Text>    
             </View>
 
             <View style={{flexDirection:"row", alignContent: 'space-between',marginTop:12}}>
