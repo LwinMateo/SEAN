@@ -49,8 +49,6 @@ export default Post1 = ({navigation}) => {
                 <Pressable onPress={()=>{navigation.navigate('Post2')}}>
                     <Text style={{fontSize:24, paddingLeft:255, color:"#273c75"}}>Next</Text>
                 </Pressable>
-                
-                
             </View>
 
         </SafeAreaView>

@@ -1,6 +1,7 @@
 import {View, Text, Image, SafeAreaView, StyleSheet, TextInput, TouchableOpacity, StatusBar, Platform, Pressable, ScrollView} from 'react-native';
 import { Entypo, AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
 
+
 export default Post = ({navigation}) => {
     return (
         <ScrollView style={[styles.container]}>
