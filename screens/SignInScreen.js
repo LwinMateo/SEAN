@@ -28,7 +28,7 @@ export default SignInScreen = ({navigation}) => {
                 </View>
 
                 <View style={{top:140}}>
-                    <Pressable style={[styles.press]} onPress={()=>{navigation.navigate('Post1')}}>
+                    <Pressable style={[styles.press]} onPress={()=>{navigation.navigate('Favorites')}}>
                         <Text style={{fontSize: 18, color:'#ffff'}}>Login</Text>
                     </Pressable>
                     <Text style={{top: 60, left: 140}}>Forgot Password?</Text>

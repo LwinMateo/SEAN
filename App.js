@@ -13,6 +13,8 @@ import SignInScreen from "./screens/SignInScreen";
 import userOption from "./screens/userOption";
 
 // import the sidebars1.js file
+import Favorites from "./screens/favorites";
+
 import sidebars1 from "./screens/sidebars1";
 
 import ContactsOptions from "./screens/ContactsOptions";
@@ -143,6 +145,13 @@ const App = () => {
             name="Post3"
             component={Post3}
             options={{ headerShown: false }}
+          />
+
+          
+          <Stack.Screen
+            name="Favorites"
+            component={Favorites}
+            options={{ headerShown: false }}  
           />
 
         </Stack.Navigator>
