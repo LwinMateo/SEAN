@@ -3,12 +3,32 @@ import { Text, StyleSheet, View, SafeAreaView, Platform, StatusBar, ScrollView, 
 import { Image } from "expo-image";
 import { AntDesign, FontAwesome5, SimpleLineIcons, Feather } from "@expo/vector-icons";
 
+import { auth } from "../firebaseConfig";
+import { signOut } from "firebase/auth";
+
+
+    
 const SideBars1 = ({navigation}) => {
+  const signOutUser = async () => {
+    try {
+      if (auth.currentUser === null) {
+        console.log("logoutPressed: There is no user to logout!")
+      } else {
+        await signOut(auth)
+        console.log("logoutPressed: Logout complete")
+        alert("logout complete!")
+        navigation.navigate("userOption")
+      }
+    } catch(error) {
+      console.log("ERROR when logging out")
+      console.log(error)
+    }
+  }
   return (
     <ScrollView style={[styles.container]}>
-        <SafeAreaView style={{flexDirection:'column', justifyContent:'center', paddingBottom:230}}>
+        <SafeAreaView style={{flexDirection:'column', justifyContent:'center', paddingBottom:210}}>
 
-            <View style={{flexDirection:'column', marginTop:'30%'}}>
+            <View style={{flexDirection:'column', marginTop:'12%'}}>
                 <Image
                 style={{ width: 300, height: 300, alignSelf: "center", borderRadius: 150 }}
                 contentFit="cover"
@@ -33,25 +53,25 @@ const SideBars1 = ({navigation}) => {
             
 
 
-            <View style={{flexDirection: "row", left: 30, top:100, borderBottomWidth:1, width: 100, borderBottomColor:"#95a5a6"}}>
+            <View style={{flexDirection: "row", left: 30, top:80, borderBottomWidth:1, width: 100, borderBottomColor:"#95a5a6"}}>
                 
             </View>
 
 
             
         
-            <View style={{flexDirection: "row", left: 30, top:130}}>
+            <View style={{flexDirection: "row", left: 30, top:100}}>
                 <SimpleLineIcons name="settings" size={24} color="#95a5a6" />                
                 <Text style={[styles.text, {left: 20,  color:"#95a5a6"}]}>System Settings</Text>
             </View>
 
-            <View style={{flexDirection: "row", left: 30, top:160}}>
+            <View style={{flexDirection: "row", left: 30, top:120}}>
                 <Feather name="help-circle" size={24} color="#95a5a6" />                
                 <Text style={[styles.text, {left: 20,  color:"#95a5a6"}]}>Help Center</Text>
             </View>
 
-            <View style={{flexDirection: "row", left: 30, top:190}}>
-                <Pressable onPress={()=>{navigation.navigate('userOption')}}>
+            <View style={{flexDirection: "row", left: 30, top:140}}>
+                <Pressable onPress={()=>{signOutUser()}}>
                     <AntDesign name="logout" size={24} color="#95a5a6" />                
                     <Text style={[styles.text, {left: 50,  color:"#95a5a6", top: -25}]}>Logout</Text>
                 </Pressable>

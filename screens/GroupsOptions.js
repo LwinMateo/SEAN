@@ -4,11 +4,12 @@ import { Entypo, AntDesign, FontAwesome5, MaterialIcons, Feather, FontAwesome } 
 export default GroupsOptions = ({navigation}) => {
     return (
         <SafeAreaView style={[styles.container]}>
-            <View style={{top:0, flexDirection: 'row', justifyContent:'space-between' }}>
-            <FontAwesome name="search" size={24} color="black" style={{left:30, top:10}} />
-                    <TextInput
-                        style={[styles.input, {width: 290}]} 
-                    />
+            <View style={{flexDirection:'row', alignContent:'space-between', left: 17 ,width: 355, height: 40, backgroundColor:'white', marginTop:5, borderRadius: 25}}>
+
+            <FontAwesome5 name="search" size={24} color="#273c75" style={{top:7, left:5, paddingLeft:10}} />
+
+            <TextInput style={{left:12, width:290}}/>
+
             </View>
 
             <View style={{top:20, flexDirection: 'row', justifyContent:'space-evenly' }}>
@@ -16,8 +17,8 @@ export default GroupsOptions = ({navigation}) => {
                     <View style={{backgroundColor:'white', paddingLeft:20, paddingRight:20, paddingBottom:10, paddingTop:10, borderRadius:20, flexDirection:'row'}}>
                         
                         <Pressable style={{flexDirection:'row'}} onPress={()=>{navigation.navigate('ContactsOptions')}}>
-                            <FontAwesome5 name="user-friends" size={24} color="black" />
-                            <Text style={{fontWeight:'bold'}}>Connections</Text>
+                            <FontAwesome5 name="user-friends" size={24} color="black" style={{top:5}}/>
+                            <Text style={{fontWeight:'bold', left: 10, top:7}}>Connections</Text>
                         </Pressable>
 
                         
@@ -26,8 +27,8 @@ export default GroupsOptions = ({navigation}) => {
                     <View style={{backgroundColor:'#74b9ff', paddingLeft:20, paddingRight:20, paddingBottom:10, paddingTop:10, borderRadius:20, flexDirection:'row'}}>
                         
                         <Pressable style={{flexDirection:'row'}} onPress={()=>{navigation.navigate('GroupsOptions')}}>
-                            <MaterialIcons name="groups" size={34} color="black" />
-                            <Text style={{fontWeight:'bold'}}>Groups</Text>
+                            <MaterialIcons name="groups" size={36} color="black" />
+                            <Text style={{fontWeight:'bold', left: 10, top:7}}>Groups</Text>
                         </Pressable>
 
                         
@@ -42,10 +43,14 @@ export default GroupsOptions = ({navigation}) => {
                 
                 
                 <ScrollView>
-                    <View style={{top:14, paddingBottom:300}}>
+                    <View style={{top:10, paddingBottom:300}}>
                         
                         
                         <View style={{top: 10, left:-5, width: 500, height: 125, backgroundColor:'white', flexDirection:'row'}}>
+                            {/* <View style={{flexDirection:'row', alignContent:'center', left:39, backgroundColor:'#2D77BC', width:30, height:30, borderRadius:34, top:34, zIndex:1}}>
+                                <Text style={{color:'white', fontSize:15, left:9, top:5}}>4</Text>
+                            </View> */}
+
                             <Image source={require("../assets/pexels-photo-335393 2.png")} style={{top: 24, left:20}}/>
 
                             <View style={{top: 34, left: 30}}>
@@ -76,6 +81,8 @@ export default GroupsOptions = ({navigation}) => {
 
 
                         <View style={{top: 25, left:-5, width: 500, height: 125, backgroundColor:'white', flexDirection:'row'}}>
+                           
+
                             <Image source={require("../assets/Toronto-Neighbourhood-Guide-Streetsville12 2.png")} style={{top: 24, left:20}}/>
 
                             <View style={{top: 34, left: 30}}>
@@ -156,7 +163,7 @@ export default GroupsOptions = ({navigation}) => {
 
 
                         <View style={{top: 70, left:-50, width: 500, height: 35, backgroundColor:'#4a69bd', flexDirection:'row', justifyContent:'center', borderRadius:50}}>
-                            <Text style={{color:'white'}}>Recommended Groups</Text>
+                            <Text style={{color:'white', top:8, right:5}}>Recommended Groups</Text>
                         </View>
 
 

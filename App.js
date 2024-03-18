@@ -11,6 +11,7 @@ import IntroScreen from "./screens/IntroScreen";
 import SignUpScreen from "./screens/SignUpScreen";
 import SignInScreen from "./screens/SignInScreen";
 import userOption from "./screens/userOption";
+import EventsPage from "./screens/Events";
 
 // import the sidebars1.js file
 import Favorites from "./screens/favorites";
@@ -40,6 +41,15 @@ const App = () => {
     return (
       <Tab.Navigator>
         <Tab.Screen name="Home" component={MainPage} options={{headerShown: false, tabBarIcon: ()=>{return(<Entypo name="home" size={24} color="#273c75" />)}}} />
+        <Tab.Screen name="Events" component={EventsPage} options={{headerTitle: "Events", 
+              headerStyle: { backgroundColor: "#74b9ff"}, 
+              headerTitleAlign:'center',
+              headerRight: () => (
+                <Image 
+                  source={require('./assets/img-3069.png')} // replace with your image path
+                  style={{ width: 40, height: 40, marginRight: 10, borderRadius:23 }} // adjust size and margin as needed
+                />
+              ), tabBarIcon: ()=>{return(<MaterialIcons name="event" size={24} color="#273c75" />)}}}/>
         <Tab.Screen name="Post" component={Post} options={{headerShown: false, tabBarIcon: ()=>{return(<FontAwesome5 name="plus" size={24} color="#273c75" />)}}}/>
         <Tab.Screen name="Contacts" component={ContactsOptions} options={{headerShown:false, tabBarIcon: ()=>{return(<MaterialIcons name="message" size={24} color="#273c75" />)}}}/>
         <Tab.Screen name="Profile" component={sidebars1} options={{headerShown: false, tabBarIcon: ()=>{return(<FontAwesome5 name="user-alt" size={24} color="#273c75" />)}}}/>
@@ -76,6 +86,22 @@ const App = () => {
             component={MainTabs}
             options={{ headerShown: false }}
           />
+          <Stack.Screen
+            name="EventsPage"
+            component={EventsPage}
+            options={{ 
+              headerShown: true, 
+              headerTitle: "Events", 
+              headerStyle: { backgroundColor: "#74b9ff"}, 
+              headerTitleAlign:'center',
+              headerRight: () => (
+                <Image 
+                  source={require('./assets/img-3069.png')} // replace with your image path
+                  style={{ width: 40, height: 40, marginRight: 10, borderRadius:23 }} // adjust size and margin as needed
+                />
+              )
+            }}
+            />
           <Stack.Screen
             name="sidebars1"
             component={sidebars1}

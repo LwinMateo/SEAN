@@ -1,8 +1,38 @@
 import {View, Text, Image, SafeAreaView, StyleSheet, TextInput, TouchableOpacity, StatusBar, Platform, Pressable, ScrollView} from 'react-native';
 import { Entypo, AntDesign } from '@expo/vector-icons';
+import {useState} from 'react';
+
+import {auth} from '../firebaseConfig';
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 
 export default SignUpScreen = ({navigation}) => {
+    // set states for the input fields
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+
+    // set function to create a new user with email and password
+    const createNewUser = async () => {
+        // check if the password and confirm password are the same
+        if (password === confirmPassword) {
+            try {
+                // 2. send the values to Firebase Authentication
+                // and wait for Firebase Auth to create a user with those credential
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                console.log("Account creation success")
+                console.log(userCredential)
+                alert("Account created!")
+                navigation.navigate("Login")
+            } catch (err) {            
+                console.log("Error when creating user")
+                console.log(`Error code: ${err.code}`)
+                console.log(`Error message: ${err.message}`)
+            }    
+        } else {
+            console.log("Passwords do not match");
+        }
+    }
 
   return (
         <ScrollView style={[styles.container]}>
@@ -17,7 +47,9 @@ export default SignUpScreen = ({navigation}) => {
                 <View style={{top:40}}>
                     <Text style={[styles.text, {bottom:10}]}>Email</Text>
                     <TextInput
-                        style={[styles.input]} 
+                        style={[styles.input]}
+                        onValue = {email}
+                        onChangeText = {setEmail}
                     />
                 </View>
 
@@ -26,11 +58,23 @@ export default SignUpScreen = ({navigation}) => {
                     <TextInput
                         style={[styles.input]}
                         secureTextEntry={true} 
+                        onValue = {password}
+                        onChangeText = {setPassword}
+                    />
+                </View>
+
+                <View style={{top:80}}>
+                    <Text style={[styles.text, {bottom:10}]}>Confirm Password</Text>
+                    <TextInput
+                        style={[styles.input]}
+                        secureTextEntry={true}
+                        onValue = {confirmPassword}
+                        onChangeText = {setConfirmPassword}
                     />
                 </View>
 
                 <View style={{top:140}}>
-                    <Pressable style={[styles.press]} onPress={()=>{navigation.navigate("MainPage")}}>
+                    <Pressable style={[styles.press]} onPress={()=>{createNewUser()}}>
                         <Text style={{fontSize: 18, color:'#ffff'}}>Sign Up</Text>
                     </Pressable>
                     <Text style={{top: 60, left: 140}}>Forgot Password?</Text>

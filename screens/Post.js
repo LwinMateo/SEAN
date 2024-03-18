@@ -6,7 +6,7 @@ export default Post = ({navigation}) => {
     return (
         <ScrollView style={[styles.container]}>
            
-            <SafeAreaView style={{flexDirection:'column', justifyContent:'center', paddingTop:30, paddingBottom:350}}>
+            <SafeAreaView style={{flexDirection:'column', justifyContent:'center', paddingTop:50, paddingBottom:10}}>
                 <View style={{right:10, top:-25, flexDirection:'column'}}>
                     <Text style={[styles.headingText]}>See Something Say Something</Text>
                 </View>
@@ -33,45 +33,46 @@ export default Post = ({navigation}) => {
                     />
                 </View>
 
-                <View style={{top:195, flexDirection:'row', justifyContent:'space-evenly'}}>
-                    <Text style={{top: 0, right:48, fontWeight:'bold'}}>Upload an Image </Text>
-                    <MaterialCommunityIcons name="image-plus" size={24} color="black" style={{right:120}}/>
+                <View style={{top:160, flexDirection:'row', justifyContent:'space-evenly', zIndex:1, left:79}}>
+                    <Text style={{top: 15, right:48, fontWeight:'bold', fontSize:20, color:'#273c75'}}>Upload an Image </Text>
+                    <MaterialCommunityIcons name="image-plus" size={54} color="white" style={{right:110}}/>
 
                 </View>
 
-                <View style={{top:250, right: -40, flexDirection:'column', justifyContent:'center'}}>
+                <View style={{top:170, right: -40, flexDirection:'column', justifyContent:'center'}}>
                     <Image
                         source={require("../assets/Group 2.png")}
+                        style={{top:-100, left:-12, width: 340, height: 390}}
                     />
                     <Image
                         source={require("../assets/Group 3.png")}
-                        style={{top:-174, left:5}}
+                        style={{top:-320, left:5}}
                     />
                 </View>
 
 
-                <View style={{top:170, flexDirection:'row', justifyContent:'space-evenly'}}>
-                    <Text style={{fontSize: 20, top: 60, right:-13, fontWeight:'bold'}}>Pick your Option</Text>
-                    <Entypo name="warning" size={24} color="#57606f" style={{top: 60, right: 40}} />
+                <View style={{top:-155, flexDirection:'row', justifyContent:'space-evenly'}}>
+                    <Text style={{fontSize: 30, top: 60, right:-13, fontWeight:'bold'}}>Pick your Option</Text>
+                    <Entypo name="warning" size={39} color="#57606f" style={{top: 60, right: 15}} />
 
                 </View>
                 
-                <View style={{top: 25, flexDirection:'row', justifyContent:'space-evenly'}}>
+                <View style={{top: -285, flexDirection:'row', justifyContent:'space-evenly'}}>
                     <View style={{top:220, borderRadius:35, backgroundColor:"#ff6b81"}}>
-                        <Text style={{paddingBottom:10, paddingTop:10, paddingLeft:15, paddingRight:15}}>Danger</Text>
+                        <Text style={{paddingBottom:10, paddingTop:10, paddingLeft:15, paddingRight:15, color:'white'}}>Danger</Text>
                     </View>
                     <View style={{top:220, borderRadius:35, backgroundColor:'#ff7f50'}}>
-                        <Text style={{paddingBottom:10, paddingTop:10, paddingLeft:15, paddingRight:15}}>Warning</Text>
+                        <Text style={{paddingBottom:10, paddingTop:10, paddingLeft:15, paddingRight:15, color:'white'}}>Warning</Text>
                     </View>
                     <View style={{top:220, borderRadius:35, backgroundColor:'#eccc68'}}>
-                        <Text style={{paddingBottom:10, paddingTop:10, paddingLeft:15, paddingRight:15}}>Caution</Text>
+                        <Text style={{paddingBottom:10, paddingTop:10, paddingLeft:15, paddingRight:15, color:'white'}}>Caution</Text>
                     </View>
                     <View style={{top:220, borderRadius:35, backgroundColor:'#70a1ff'}}>
-                        <Text style={{paddingBottom:10, paddingTop:10, paddingLeft:15, paddingRight:15}}>Notice</Text>
+                        <Text style={{paddingBottom:10, paddingTop:10, paddingLeft:15, paddingRight:15, color:'white'}}>Notice</Text>
                     </View>
                 </View>
 
-                <View style={{top: 55, flexDirection:'row', justifyContent:'space-evenly'}}>
+                <View style={{top: -265, flexDirection:'row', justifyContent:'space-evenly'}}>
                     <View style={{top:220, borderRadius:35, backgroundColor:"#dfe4ea"}}>
                         <Text style={{paddingBottom:20, paddingTop:20, paddingLeft:55, paddingRight:55}}>Cancel</Text>
                     </View>

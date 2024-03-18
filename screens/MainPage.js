@@ -9,7 +9,12 @@ const MainPage = ({navigation}) => {
       <View style={{flexDirection:'column', marginBottom:10, backgroundColor:"#74b9ff", width:905, height: 130, left: -23}}>
 
         <View style={{flexDirection:'row', alignContent:'center'}}>
-          <Text style={{fontSize:34, fontWeight:'bold', right: -170, marginTop:5}}>NEAR</Text>
+          <Text style={{fontSize:18, fontWeight:'bold', right: -30, marginTop:8}}>NEAR</Text>
+          <Image
+                style={{ width: 40, height: 40, alignSelf: "center", borderRadius: 150 , left: 290, top: 10}}
+                contentFit="cover"
+                source={require("../assets/img-3069.png")}
+                />
           
         </View>
 
@@ -77,9 +82,9 @@ const MainPage = ({navigation}) => {
               <View style={{flexDirection: 'row', alignContent:'space-between', marginTop:25}}>
                 <AntDesign style={{left:40, top:10}} name="heart" size={30} color="pink" />
 
-                <Feather style={{left:60, top:10}} name="message-circle" size={30} color="#273c75" />
+                <Feather style={{left:60, top:10}} name="message-circle" size={30} color="black" />
 
-                <Feather style={{left:80, top:10}} name="send" size={30} color="#273c75" />
+                <Feather style={{left:80, top:10}} name="send" size={30} color="black" />
 
               </View>
 
@@ -148,9 +153,9 @@ const MainPage = ({navigation}) => {
               <View style={{flexDirection: 'row', alignContent:'space-between', marginTop:25}}>
                 <AntDesign style={{left:40, top:10}} name="heart" size={30} color="pink" />
 
-                <Feather style={{left:60, top:10}} name="message-circle" size={30} color="#273c75" />
+                <Feather style={{left:60, top:10}} name="message-circle" size={30} color="black" />
 
-                <Feather style={{left:80, top:10}} name="send" size={30} color="#273c75" />
+                <Feather style={{left:80, top:10}} name="send" size={30} color="black" />
 
               </View>
 
@@ -213,9 +218,9 @@ const MainPage = ({navigation}) => {
               <View style={{flexDirection: 'row', alignContent:'space-between', marginTop:25}}>
                 <AntDesign style={{left:40, top:10}} name="heart" size={30} color="pink" />
 
-                <Feather style={{left:60, top:10}} name="message-circle" size={30} color="#273c75" />
+                <Feather style={{left:60, top:10}} name="message-circle" size={30} color="black" />
 
-                <Feather style={{left:80, top:10}} name="send" size={30} color="#273c75" />
+                <Feather style={{left:80, top:10}} name="send" size={30} color="black" />
 
               </View>
 
@@ -279,9 +284,9 @@ const MainPage = ({navigation}) => {
               <View style={{flexDirection: 'row', alignContent:'space-between', marginTop:25}}>
                 <AntDesign style={{left:40, top:10}} name="heart" size={30} color="pink" />
 
-                <Feather style={{left:60, top:10}} name="message-circle" size={30} color="#273c75" />
+                <Feather style={{left:60, top:10}} name="message-circle" size={30} color="black" />
 
-                <Feather style={{left:80, top:10}} name="send" size={30} color="#273c75" />
+                <Feather style={{left:80, top:10}} name="send" size={30} color="black" />
 
               </View>
 

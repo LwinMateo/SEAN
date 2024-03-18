@@ -4,11 +4,12 @@ import { Entypo, AntDesign, FontAwesome5, MaterialIcons, Feather, FontAwesome } 
 export default SignInScreen = ({navigation}) => {
     return (
         <SafeAreaView style={[styles.container]}>
-            <View style={{top:0, flexDirection: 'row', justifyContent:'space-between' }}>
-                <FontAwesome name="search" size={24} color="black" style={{left:30, top:10}} />
-                    <TextInput
-                        style={[styles.input, {width: 290}]} 
-                    />
+            <View style={{flexDirection:'row', alignContent:'space-between', left: 14 ,width: 355, height: 40, backgroundColor:'white', marginTop:25, borderRadius: 25}}>
+
+                <FontAwesome5 name="search" size={24} color="#273c75" style={{top:7, left:5, paddingLeft:10}} />
+
+                <TextInput style={{left:12, width:290}}/>
+
             </View>
 
             <View style={{top:20, flexDirection: 'row', justifyContent:'space-evenly' }}>
@@ -16,8 +17,8 @@ export default SignInScreen = ({navigation}) => {
                     <View style={{backgroundColor:'#74b9ff', paddingLeft:20, paddingRight:20, paddingBottom:10, paddingTop:10, borderRadius:20, flexDirection:'row'}}>
                         
                         <Pressable style={{flexDirection:'row'}}>
-                            <FontAwesome5 name="user-friends" size={24} color="black" />
-                            <Text style={{fontWeight:'bold'}}>Connections</Text>
+                            <FontAwesome5 name="user-friends" size={24} color="black" style={{top:5}}/>
+                            <Text style={{fontWeight:'bold', left: 10, top:7}}>Connections</Text>
                         </Pressable>
 
                         
@@ -27,7 +28,7 @@ export default SignInScreen = ({navigation}) => {
                         
                         <Pressable style={{flexDirection:'row'}} onPress={()=>{navigation.navigate('GroupsOptions')}}>
                             <MaterialIcons name="groups" size={34} color="black" />
-                            <Text style={{fontWeight:'bold'}}>Groups</Text>
+                            <Text style={{fontWeight:'bold', left: 10, top:7}}>Groups</Text>
                         </Pressable>
 
                         
@@ -155,7 +156,7 @@ export default SignInScreen = ({navigation}) => {
 
 
                         <View style={{top: 70, left:-50, width: 500, height: 35, backgroundColor:'#4a69bd', flexDirection:'row', justifyContent:'center', borderRadius:50}}>
-                            <Text style={{color:'white'}}>Recommended Contacts</Text>
+                            <Text style={{color:'white', marginTop:8}}>Recommended Contacts</Text>
                         </View>
 
 

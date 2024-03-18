@@ -1,7 +1,33 @@
 import {View, Text, Image, SafeAreaView, StyleSheet, TextInput, TouchableOpacity, StatusBar, Platform, Pressable, ScrollView} from 'react-native';
 import { Entypo, AntDesign } from '@expo/vector-icons';
+import {useState} from 'react';
+
+import {auth} from '../firebaseConfig';
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 export default SignInScreen = ({navigation}) => {
+    // set states for the input fields
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    // set function to sign in a user with email and password
+    const signInUser = async () => {
+        try {
+            // 2. send the values to Firebase Authentication
+            // and wait for Firebase Auth to sign in the user with those credential
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            console.log("Sign in success")
+            console.log(userCredential)
+            alert("Sign in success!")
+            navigation.navigate("Favorites")
+        } catch (err) {            
+            console.log("Error when signing in")
+            console.log(`Error code: ${err.code}`)
+            console.log(`Error message: ${err.message}`)
+            //navigation.navigate("Favorites")
+        }    
+    }
+
     return (
         <ScrollView style={[styles.container]}>
            
@@ -16,19 +42,23 @@ export default SignInScreen = ({navigation}) => {
                     <Text style={[styles.text, {bottom:10}]}>Email</Text>
                     <TextInput
                         style={[styles.input]} 
+                        onValue = {email}
+                        onChangeText = {setEmail}
                     />
                 </View>
 
                 <View style={{top:60}}>
-                    <Text style={[styles.text, {bottom:10}]}>Password</Text>
+                    <Text style={[styles.text, {bottom:10}]} >Password</Text>
                     <TextInput
                         style={[styles.input]}
                         secureTextEntry={true} 
+                        onValue={password}
+                        onChangeText={setPassword}
                     />
                 </View>
 
                 <View style={{top:140}}>
-                    <Pressable style={[styles.press]} onPress={()=>{navigation.navigate('Favorites')}}>
+                    <Pressable style={[styles.press]} onPress={()=>{signInUser()}}>
                         <Text style={{fontSize: 18, color:'#ffff'}}>Login</Text>
                     </Pressable>
                     <Text style={{top: 60, left: 140}}>Forgot Password?</Text>
